@@ -133,6 +133,24 @@
       }
     }
 
+    .hero-logo-large {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-logo-img {
+      max-width: 220px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 12px 35px rgba(0,0,0,0.8));
+    }
+
+    @media (max-width: 768px) {
+      .hero-logo-large {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     .hero-title {
       font-size: clamp(2rem, 5vw, 3.5rem);
       margin-bottom: 1rem;
@@ -486,7 +504,7 @@
 <div class="site-header">
   <div class="site-header-inner">
     <div class="logo-block">
-      <!-- Mets ton vrai fichier logo ici -->
+      <!-- mets ici ton PNG avec transparence -->
       <img src="logo-videaction.png" alt="VIDEACTION – logo" class="logo-img">
       <span class="logo-text">VIDEACTION</span>
     </div>
@@ -504,6 +522,11 @@
   <div class="container">
     <div class="hero">
       <div>
+        <!-- Logo large sous la petite bannière -->
+        <div class="hero-logo-large">
+          <img src="logo-videaction.png" alt="VIDEACTION – logo" class="hero-logo-img">
+        </div>
+
         <p class="tag">🎥 Vidéaste freelance</p>
         <h1 class="hero-title">Clément Bouvéron, cadreur & monteur vidéo.</h1>
         <p class="hero-subtitle">
@@ -559,7 +582,7 @@
     </div>
   </section>
 
-  <!-- Prestations (déplacé avant Showreel) -->
+  <!-- Prestations -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">Prestations</h2>
