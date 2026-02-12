@@ -203,6 +203,21 @@
       font-weight: 600;
     }
 
+    /* Capsule rôle sous le nom */
+    .role-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      background: rgba(192,57,43,0.16);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-top: 0.35rem;
+    }
+
     .hero-subtitle {
       font-size: 1.05rem;
       color: var(--muted);
@@ -340,8 +355,8 @@
     }
 
     .profile-photo-wrapper {
-      width: 130px;
-      height: 130px;
+      width: 124px;
+      height: 124px;
       border-radius: 999px;
       overflow: hidden;
       border: 2px solid rgba(255,255,255,0.18);
@@ -352,10 +367,10 @@
     }
 
     .profile-photo {
-      width: 105%;
-      height: 105%;
+      width: 110%;
+      height: 110%;
       object-fit: cover;
-      object-position: center 40%; /* MODIF : décale légèrement l’image vers le bas */
+      object-position: center 30%;
       display: block;
     }
 
@@ -555,11 +570,10 @@
       background: rgba(0,0,0,0.7);
     }
 
-    /* BOUTON RETOUR EN HAUT */
-    .back-to-top {
+    /* BOUTONS RETOUR EN HAUT */
+    .back-to-top,
+    .back-to-top-top {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
       width: 44px;
       height: 44px;
       border-radius: 999px;
@@ -577,26 +591,39 @@
       z-index: 60;
     }
 
-    .back-to-top:hover {
+    .back-to-top {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .back-to-top-top {
+      top: 80px;
+      right: 20px;
+    }
+
+    .back-to-top:hover,
+    .back-to-top-top:hover {
       transform: translateY(-2px);
       background: rgba(0,0,0,0.9);
     }
 
-    .back-to-top.show {
+    .back-to-top.show,
+    .back-to-top-top.show {
       opacity: 1;
       visibility: visible;
     }
 
-    .back-to-top span {
+    .back-to-top span,
+    .back-to-top-top span {
       font-size: 1.3rem;
       line-height: 1;
     }
 
-    .back-to-top-tooltip {
+    .back-to-top-tooltip,
+    .back-to-top-top-tooltip {
       position: absolute;
       right: 50%;
       transform: translateX(50%);
-      bottom: 52px;
       background: rgba(0,0,0,0.9);
       color: #fff;
       padding: 0.25rem 0.6rem;
@@ -608,7 +635,16 @@
       transition: opacity 0.2s ease;
     }
 
-    .back-to-top:hover .back-to-top-tooltip {
+    .back-to-top-tooltip {
+      bottom: 52px;
+    }
+
+    .back-to-top-top-tooltip {
+      top: 52px;
+    }
+
+    .back-to-top:hover .back-to-top-tooltip,
+    .back-to-top-top:hover .back-to-top-top-tooltip {
       opacity: 1;
     }
 
@@ -626,6 +662,10 @@
       }
       .back-to-top {
         bottom: 16px;
+        right: 16px;
+      }
+      .back-to-top-top {
+        top: 72px;
         right: 16px;
       }
     }
@@ -663,12 +703,11 @@
           </a>
         </div>
 
-        <!-- Interversion : nom + tag, puis rôle -->
+        <!-- Nom + rôle -->
         <div class="hero-name-tag-row">
-          <p class="hero-subtitle-name">Clément Bouvéron</p>
-          <p class="tag">🎥 Vidéaste freelance</p>
+          <p class="hero-subtitle-name">Clément Bouvéron – Vidéaste freelance</p>
         </div>
-        <p class="hero-subtitle-role">Cadrage, Montage & Post-production</p>
+        <p class="role-tag">Cadrage, Montage &amp; Post-Production</p>
 
         <p class="hero-subtitle">
           Je crée des vidéos claires, rythmées et adaptées à vos besoins :
@@ -777,7 +816,7 @@
   <section id="showreel">
     <div class="container">
       <h2 class="section-title">Showreel</h2>
-    <p class="section-subtitle">
+      <p class="section-subtitle">
         Un aperçu de mon travail dans différents univers : entreprises & collectivités, clips musicaux et bandes-annonce.
       </p>
 
@@ -893,12 +932,12 @@
             <li class="cv-item">
               <p class="cv-year">2017–Présent</p>
               <p class="cv-role">Vidéaste freelance – Auto-entreprise “Vidéaction”</p>
-              <p class="cv-place">Clips musicaux, Bande-annonces, Reportages d'entreprise et évenementiels, interventions en écoles (mapping/stop-motion).</p>
+              <p class="cv-place">Clips musicaux, trailers jeux vidéo, mappings vidéo, interventions en écoles (stop motion, pixilation).</p>
             </li>
             <li class="cv-item">
-              <p class="cv-year">2014–2024</p>
+              <p class="cv-year">2014–2017</p>
               <p class="cv-role">Cadreur-Monteur / Technicien Vidéo</p>
-              <p class="cv-place">Ankama Studio – Marketing & Communication : Trailers, Vidéos corporate, R&D encodage et diffusion web.</p>
+              <p class="cv-place">Ankama Studio – Marketing & Communication : vidéos corporate, R&D encodage et diffusion web.</p>
             </li>
             <li class="cv-item">
               <p class="cv-year">2009–2014</p>
@@ -913,17 +952,17 @@
           </ul>
         </div>
         <div class="card">
-          <!-- MODIF : version allégée -->
           <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Profil / études</p>
           <p style="color:var(--muted); margin-bottom:1.5rem;">
-            Master Cinéma et BTS Montage &amp; Post-Production.<br>
+            Master Cinéma et BTS Montage &amp; Post-Production.<br><br>
             Plus de 15 ans d’expérience entre studio de création (Ankama) et projets freelance.
           </p>
 
           <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Compétences clés</p>
           <p style="color:var(--muted); margin-bottom:1.5rem;">
-            <strong>Techniques :</strong> Cadrage, Montage, étalonnage, Motion <br>
-            <strong>Logiciels :</strong> Premiere Pro, DaVinci Resolve, After Effects, Avid<br>
+            <strong>Techniques :</strong> cadrage, montage, étalonnage, motion léger<br>
+            <strong>Logiciels :</strong> Premiere Pro, After Effects, DaVinci Resolve<br>
+            <strong>Langues :</strong> Anglais courant
           </p>
 
           <a href="CV.pdf" class="btn btn-primary" download>📄 Télécharger CV (PDF)</a>
@@ -1003,10 +1042,15 @@
   </div>
 </footer>
 
-<!-- Bouton retour en haut -->
+<!-- Boutons retour en haut -->
 <button class="back-to-top" id="backToTopBtn" aria-label="Retour en haut">
   <span>↑</span>
   <div class="back-to-top-tooltip">En haut</div>
+</button>
+
+<button class="back-to-top-top" id="backToTopTopBtn" aria-label="Retour en haut">
+  <span>↑</span>
+  <div class="back-to-top-top-tooltip">En haut</div>
 </button>
 
 <script>
@@ -1027,21 +1071,34 @@
     });
   });
 
-  // Bouton retour en haut (affichage au scroll)
+  // Boutons retour en haut
   const backToTopBtn = document.getElementById('backToTopBtn');
+  const backToTopTopBtn = document.getElementById('backToTopTopBtn');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 400) {
       backToTopBtn.classList.add('show');
     } else {
       backToTopBtn.classList.remove('show');
     }
+
+    // On affiche le bouton du haut à partir de la zone "Prestations"
+    if (scrollY > 900) {
+      backToTopTopBtn.classList.add('show');
+    } else {
+      backToTopTopBtn.classList.remove('show');
+    }
   });
 
-  backToTopBtn.addEventListener('click', (e) => {
+  function scrollToTop(e) {
     e.preventDefault();
     document.querySelector('#top').scrollIntoView({ behavior: 'smooth' });
-  });
+  }
+
+  backToTopBtn.addEventListener('click', scrollToTop);
+  backToTopTopBtn.addEventListener('click', scrollToTop);
 </script>
 
 </body>
