@@ -149,7 +149,7 @@
     }
 
     .hero-logo-img {
-      max-width: 360px;  /* plus large */
+      max-width: 360px;
       width: 100%;
       height: auto;
       display: block;
@@ -164,16 +164,22 @@
     }
 
     .hero-title {
-      font-size: clamp(1.8rem, 4.5vw, 2.6rem);  /* un peu plus petit */
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem);
       margin-bottom: 0.15rem;
       font-weight: 700;
     }
 
     .hero-subtitle-role {
-      font-size: 1.05rem;   /* un peu plus grand */
-      font-weight: 600;     /* en gras léger */
+      font-size: 1.08rem;
+      font-weight: 600;
       color: var(--muted);
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-subtitle-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
     }
 
     .hero-subtitle {
@@ -181,6 +187,21 @@
       color: var(--muted);
       margin-bottom: 1.75rem;
       max-width: 520px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      background: rgba(192,57,43,0.16);
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      margin-top: 0.4rem;
+      margin-bottom: 1rem;
     }
 
     .hero-buttons {
@@ -192,7 +213,8 @@
 
     @media (max-width: 768px) {
       .hero-subtitle,
-      .hero-subtitle-role {
+      .hero-subtitle-role,
+      .hero-subtitle-name {
         margin-left: auto;
         margin-right: auto;
       }
@@ -237,20 +259,6 @@
       background: rgba(255,255,255,0.04);
     }
 
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.35rem 0.8rem;
-      font-size: 0.85rem;
-      border-radius: 999px;
-      background: rgba(192,57,43,0.16);
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
     /* SECTIONS */
     section {
       padding: 4.5rem 0;
@@ -290,10 +298,31 @@
       gap: 3rem;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: 900px) {
       .about-grid {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.7fr 1.3fr;
       }
+    }
+
+    .about-photo-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .about-photo-wrapper {
+      width: 100%;
+      height: 100%;
+      max-height: 340px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .about-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     /* PHOTO DANS LA CARTE HERO DROITE */
@@ -305,8 +334,8 @@
     }
 
     .profile-photo-wrapper {
-      width: 96px;   /* plus grand qu'avant */
-      height: 96px;
+      width: 112px;
+      height: 112px;
       border-radius: 999px;
       overflow: hidden;
       border: 2px solid rgba(255,255,255,0.18);
@@ -317,10 +346,10 @@
     }
 
     .profile-photo {
-      width: 110%;      /* léger zoom pour mieux centrer le visage */
-      height: 110%;
+      width: 115%;
+      height: 115%;
       object-fit: cover;
-      object-position: center 5%; /* décale légèrement vers le bas pour éviter de couper le haut du crâne */
+      object-position: center 2%;
       display: block;
     }
 
@@ -628,11 +657,10 @@
           </a>
         </div>
 
-        <p class="tag">🎥 Vidéaste freelance</p>
-
-        <!-- Rôle en premier, nom ensuite -->
+        <!-- Ordre : rôle -> nom -> tag -->
         <p class="hero-subtitle-role">Cadrage, Montage & Post-production</p>
-        <h1 class="hero-title">Clément Bouvéron</h1>
+        <p class="hero-subtitle-name">Clément Bouvéron</p>
+        <p class="tag">🎥 Vidéaste freelance</p>
 
         <p class="hero-subtitle">
           Je crée des vidéos claires, rythmées et adaptées à vos besoins :
@@ -645,7 +673,7 @@
       </div>
       <div class="card profile-card">
         <div class="profile-photo-wrapper">
-          <!-- Mets ici ta vraie photo -->
+          <!-- Portrait -->
           <img src="photo-clement.png" alt="Clément Bouvéron" class="profile-photo">
         </div>
         <div>
@@ -681,13 +709,19 @@
             directement à votre audience. Mon objectif : produire des vidéos professionnelles,
             adaptables à vos supports (web, réseaux sociaux, événementiel).
           </p>
+          <div class="card" style="margin-top:1.75rem;">
+            <p style="font-weight:700; margin-bottom:0.75rem; font-size:1.05rem;">Infos rapides</p>
+            <p><strong>📍 Basé à :</strong> Valenciennes (Hauts-de-France)</p>
+            <p><strong>🎯 Spécialités :</strong> tournage, montage, contenus réseaux sociaux</p>
+            <p><strong>👥 Clients :</strong> entreprises, collectivités, artistes, agences</p>
+            <p><strong>🛠️ Matériel :</strong> caméra pro, optiques, son, lumière</p>
+          </div>
         </div>
-        <div class="card">
-          <p style="font-weight:700; margin-bottom:0.75rem; font-size:1.05rem;">Infos rapides</p>
-          <p><strong>📍 Basé à :</strong> Valenciennes (Hauts-de-France)</p>
-          <p><strong>🎯 Spécialités :</strong> tournage, montage, contenus réseaux sociaux</p>
-          <p><strong>👥 Clients :</strong> entreprises, collectivités, artistes, agences</p>
-          <p><strong>🛠️ Matériel :</strong> caméra pro, optiques, son, lumière</p>
+        <div class="card about-photo-card">
+          <div class="about-photo-wrapper">
+            <!-- Photo de toi en tournage -->
+            <img src="photo-tournage.jpg" alt="Clément Bouvéron en tournage" class="about-photo">
+          </div>
         </div>
       </div>
     </div>
@@ -915,7 +949,6 @@
         <div class="card">
           <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Coordonnées</p>
           <p><strong>📧 E-mail :</strong> <a href="mailto:votre.email@pro.fr">votre.email@pro.fr</a></p>
-          <!-- Téléphone + réseaux supprimés -->
         </div>
       </div>
     </div>
