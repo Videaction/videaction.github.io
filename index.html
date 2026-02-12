@@ -148,14 +148,13 @@
       margin-bottom: 1.5rem;
     }
 
-.hero-logo-img {
-  max-width: 360px;   /* tu peux ajuster 320 / 360 / 400 selon ton ressenti */
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 12px 35px rgba(0,0,0,0.8));
-}
-
+    .hero-logo-img {
+      max-width: 360px;  /* plus large */
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 12px 35px rgba(0,0,0,0.8));
+    }
 
     @media (max-width: 768px) {
       .hero-logo-large {
@@ -165,13 +164,14 @@
     }
 
     .hero-title {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      margin-bottom: 0.25rem;
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem);  /* un peu plus petit */
+      margin-bottom: 0.15rem;
       font-weight: 700;
     }
 
     .hero-subtitle-role {
-      font-size: 0.98rem;
+      font-size: 1.05rem;   /* un peu plus grand */
+      font-weight: 600;     /* en gras léger */
       color: var(--muted);
       margin-bottom: 1.25rem;
     }
@@ -305,8 +305,8 @@
     }
 
     .profile-photo-wrapper {
-      width: 80px;
-      height: 80px;
+      width: 96px;   /* plus grand qu'avant */
+      height: 96px;
       border-radius: 999px;
       overflow: hidden;
       border: 2px solid rgba(255,255,255,0.18);
@@ -317,9 +317,10 @@
     }
 
     .profile-photo {
-      width: 100%;
-      height: 100%;
+      width: 110%;      /* léger zoom pour mieux centrer le visage */
+      height: 110%;
       object-fit: cover;
+      object-position: center 5%; /* décale légèrement vers le bas pour éviter de couper le haut du crâne */
       display: block;
     }
 
@@ -519,24 +520,6 @@
       background: rgba(0,0,0,0.7);
     }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-    }
-
-    .social-links a {
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .social-links a:hover {
-      color: var(--text);
-    }
-
     /* BOUTON RETOUR EN HAUT */
     .back-to-top {
       position: fixed;
@@ -646,8 +629,11 @@
         </div>
 
         <p class="tag">🎥 Vidéaste freelance</p>
-        <h1 class="hero-title">Clément Bouvéron</h1>
+
+        <!-- Rôle en premier, nom ensuite -->
         <p class="hero-subtitle-role">Cadrage, Montage & Post-production</p>
+        <h1 class="hero-title">Clément Bouvéron</h1>
+
         <p class="hero-subtitle">
           Je crée des vidéos claires, rythmées et adaptées à vos besoins :
           clips, interviews, contenus réseaux sociaux, aftermovies et films pour entreprises & collectivités.
@@ -665,7 +651,7 @@
         <div>
           <h2 style="margin-bottom:0.6rem; font-size:1.2rem;">Disponible pour de nouvelles missions</h2>
           <p style="color:var(--muted); font-size:0.98rem;">
-            Basé à Valenciennes (Hauts-de-France), je me déplace autour de Valenciennes et en région Lilloise.
+            Basé à Valenciennes (Hauts-de-France), je me déplace en France et à l’étranger.
             <br>Accompagnement de la préparation au montage final, pour des vidéos efficaces et élégantes.
           </p>
         </div>
@@ -929,13 +915,7 @@
         <div class="card">
           <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Coordonnées</p>
           <p><strong>📧 E-mail :</strong> <a href="mailto:votre.email@pro.fr">votre.email@pro.fr</a></p>
-          <p><strong>📱 Téléphone :</strong> +33 6 XX XX XX XX</p>
-          <div class="social-links">
-            <a href="#" target="_blank">📸 Instagram</a>
-            <a href="#" target="_blank">▶️ YouTube</a>
-            <a href="#" target="_blank">📹 Vimeo</a>
-            <a href="#" target="_blank">💼 LinkedIn</a>
-          </div>
+          <!-- Téléphone + réseaux supprimés -->
         </div>
       </div>
     </div>
