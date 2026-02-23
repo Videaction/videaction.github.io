@@ -589,21 +589,23 @@
       visibility: hidden;
       transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
       z-index: 60;
+
+      /* centrage horizontal */
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .back-to-top {
       bottom: 20px;
-      right: 20px;
     }
 
     .back-to-top-top {
       top: 80px;
-      right: 20px;
     }
 
     .back-to-top:hover,
     .back-to-top-top:hover {
-      transform: translateY(-2px);
+      transform: translateX(-50%) translateY(-2px);
       background: rgba(0,0,0,0.9);
     }
 
@@ -662,11 +664,9 @@
       }
       .back-to-top {
         bottom: 16px;
-        right: 16px;
       }
       .back-to-top-top {
         top: 72px;
-        right: 16px;
       }
     }
   </style>
