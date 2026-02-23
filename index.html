@@ -589,21 +589,26 @@
       visibility: hidden;
       transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
       z-index: 60;
+    }
 
-      /* centrage horizontal */
+    /* bouton du bas : en bas à droite */
+    .back-to-top {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    /* bouton du haut : centré, un peu plus près du haut */
+    .back-to-top-top {
+      top: 60px;
       left: 50%;
       transform: translateX(-50%);
     }
 
-    .back-to-top {
-      bottom: 20px;
+    .back-to-top:hover {
+      transform: translateY(-2px);
+      background: rgba(0,0,0,0.9);
     }
 
-    .back-to-top-top {
-      top: 80px;
-    }
-
-    .back-to-top:hover,
     .back-to-top-top:hover {
       transform: translateX(-50%) translateY(-2px);
       background: rgba(0,0,0,0.9);
@@ -664,9 +669,10 @@
       }
       .back-to-top {
         bottom: 16px;
+        right: 16px;
       }
       .back-to-top-top {
-        top: 72px;
+        top: 56px;
       }
     }
   </style>
@@ -945,11 +951,6 @@
               <p class="cv-role">Monteur - Chef Monteur</p>
               <p class="cv-place">Ankama Productions : web-TV, reportages, bande-annonces, webséries, clips musicaux.</p>
             </li>
-            <li class="cv-item">
-              <p class="cv-year">2008–2014</p>
-              <p class="cv-role">Monteur - Intervenant Vidéo</p>
-              <p class="cv-place">Intermittent du spectacle : projets culturels, ateliers scolaires, concerts, projections, installations vidéos.</p>
-            </li>
           </ul>
         </div>
         <div class="card">
@@ -967,7 +968,7 @@
 
           <a href="CV.pdf" class="btn btn-primary" download>📄 Télécharger CV (PDF)</a>
           <p style="margin-top:0.75rem;">
-            <a href="https://www.linkedin.com/in/chouveron" target="_blank" rel="noopener">Mon LinkedIn</a>
+            <a href="https://www.linkedin.com/in/cbouveron" target="_blank" rel="noopener">Mon LinkedIn</a>
           </p>
         </div>
       </div>
