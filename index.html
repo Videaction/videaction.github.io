@@ -374,10 +374,29 @@
       display: block;
     }
 
+    /* bloc texte + bouton dans la carte profil */
+    .profile-text-and-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      width: 100%;
+    }
+
+    .profile-cta-btn {
+      align-self: flex-end;
+    }
+
     @media (max-width: 768px) {
       .profile-card {
         align-items: center;
         text-align: center;
+      }
+      .profile-text-and-cta {
+        align-items: center;
+        text-align: center;
+      }
+      .profile-cta-btn {
+        align-self: center;
       }
     }
 
@@ -724,16 +743,21 @@
           <a href="#showreel" class="btn btn-primary">Voir un aperçu de mon travail</a>
         </div>
       </div>
+
+      <!-- Carte profil + bouton Me contacter -->
       <div class="card profile-card">
         <div class="profile-photo-wrapper">
           <img src="photo-clement.png" alt="Clément Bouvéron" class="profile-photo">
         </div>
-        <div>
-          <h2 style="margin-bottom:0.6rem; font-size:1.2rem;">Disponible pour tous vos futurs projets !</h2>
-          <p style="color:var(--muted); font-size:0.98rem;">
-            Basé à Valenciennes (Hauts-de-France), je me déplace en région pour des <strong>captations</strong> autour de Valenciennes et en région Lilloise.
-            <br>Je travaille également à distance, pour tous vos projets de <strong>montage</strong>, avec des vidéos efficaces et élégantes.
-          </p>
+        <div class="profile-text-and-cta">
+          <div>
+            <h2 style="margin-bottom:0.6rem; font-size:1.2rem;">Disponible pour tous vos futurs projets !</h2>
+            <p style="color:var(--muted); font-size:0.98rem;">
+              Basé à Valenciennes (Hauts-de-France), je me déplace en région pour des <strong>captations</strong> autour de Valenciennes et en région Lilloise.
+              <br>Je travaille également à distance, pour tous vos projets de <strong>montage</strong>, avec des vidéos efficaces et élégantes.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-primary profile-cta-btn">Me contacter</a>
         </div>
       </div>
     </div>
@@ -753,18 +777,18 @@
         <div>
           <p>
             Bonjour ! Bienvenue sur le site de <strong>Vidéaction</strong>. 
-             </p>
+          </p>
+          <p>
             Vidéaction, c'est moi, <strong>Clément</strong>, vidéaste autoentrepreneur spécialisé en cadrage et montage depuis une vingtaine d'années.
-           J’ai travaillé 15 ans chez <strong>Ankama</strong> (Dofus, Wakfu,...), acteur majeur du divertissement français sur de multiples projets (jeux-vidéo, films et séries animées...) et ai lancé en parallèle mon autoentreprise en 2017, pour des missions annexes.
-             </p>
-            Recherchant toujours plus de variété dans mes projets, j'ai pu me diversifier avec la réalisation et montage de clips musicaux, trailers de jeux et de films, la captation de multiples évènements coporate, mais également développer une activité plus engagée, avec plusieurs interventions
+            J’ai travaillé 15 ans chez <strong>Ankama</strong> (Dofus, Wakfu,...), acteur majeur du divertissement français sur de multiples projets (jeux-vidéo, films et séries animées...) et ai lancé en parallèle mon autoentreprise en 2017, pour des missions annexes.
+          </p>
+          <p>
+            Recherchant toujours plus de variété dans mes projets, j'ai pu me diversifier avec la réalisation et montage de clips musicaux, trailers de jeux et de films, la captation de multiples évènements corporate, mais également développer une activité plus engagée, avec plusieurs interventions
             en milieu scolaire, pour initier les jeunes à l’image (pédagogie autour de la création, vigilance face à la manipulation audio-visuelle...) et aux techniques d’animation (films stop motion, pixilation...).
           </p>
           <p style="margin-top:1.5rem;">
             J’aime les images soignées, les montages rythmés et les histoires simples qui parlent
-            directement au public. 
-             </p>
-            <strong>Mon objectif</strong> : produire des vidéos professionnelles,
+            directement au public. <strong>Mon objectif</strong> : produire des vidéos professionnelles,
             adaptables à votre audience et à vos supports (web, réseaux sociaux, événementiel).
           </p>
           <div class="card" style="margin-top:1.75rem;">
@@ -848,262 +872,4 @@
       </p>
       <div class="projects-grid">
         <a class="project-card" href="https://www.youtube.com/watch?v=XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Film de présentation – Entreprise</p>
-            <p class="project-type">Corporate / communication institutionnelle</p>
-          </div>
-        </a>
-        <a class="project-card" href="https://vimeo.com/XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Reportage – Ville / collectivité</p>
-            <p class="project-type">Communication publique</p>
-          </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Conférence / événement professionnel</p>
-            <p class="project-type">Captation & montage</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Clips musicaux -->
-      <h3 style="font-size:1.5rem; margin-top:3.5rem; margin-bottom:1rem;">Clips musicaux</h3>
-      <p style="color:var(--muted); margin-bottom:1.5rem; max-width:700px;">
-        Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
-      </p>
-      <div class="projects-grid">
-        <a class="project-card" href="https://www.youtube.com/watch?v=XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Clip – Artiste 1</p>
-            <p class="project-type">Réalisation & montage</p>
-          </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Clip – Artiste 2</p>
-            <p class="project-type">Tournage & montage</p>
-          </div>
-        </a>
-        <a class="project-card" href="https://vimeo.com/XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Session live / studio</p>
-            <p class="project-type">Captation multi-caméras</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Bandes-annonce -->
-      <h3 style="font-size:1.5rem; margin-top:3.5rem; margin-bottom:1rem;">Bandes-annonce</h3>
-      <p style="color:var(--muted); margin-bottom:1.5rem; max-width:700px;">
-        Bandes-annonce pour événements, spectacles, films, projets associatifs ou culturels.
-      </p>
-      <div class="projects-grid">
-        <a class="project-card" href="https://www.youtube.com/watch?v=XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Bande-annonce – Événement</p>
-            <p class="project-type">Teaser promotionnel</p>
-          </div>
-        </a>
-        <a class="project-card" href="https://vimeo.com/XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Bande-annonce – Spectacle</p>
-            <p class="project-type">Captation & montage</p>
-          </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=XXXXX" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
-          <div class="project-body">
-            <p class="project-title">Teaser – Projet associatif</p>
-            <p class="project-type">Communication vidéo</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CV -->
-  <section id="cv">
-    <div class="container">
-      <h2 class="section-title">Parcours professionnel</h2>
-      <p class="section-subtitle">
-        Expérience, formations et compétences techniques.
-      </p>
-      <div class="cv-grid">
-        <div>
-          <ul class="cv-list">
-            <li class="cv-item">
-              <p class="cv-year">2017–Présent</p>
-              <p class="cv-role">Vidéaste freelance – Auto-entreprise “Vidéaction”</p>
-              <p class="cv-place">Clips musicaux, trailers jeux vidéo, mappings vidéo, interventions en écoles (stop motion, pixilation).</p>
-            </li>
-            <li class="cv-item">
-              <p class="cv-year">2014–2024</p>
-              <p class="cv-role">Cadreur-Monteur / Technicien Vidéo</p>
-              <p class="cv-place">Ankama Studio – Marketing & Communication : vidéos corporate, R&D encodage et diffusion web.</p>
-            </li>
-            <li class="cv-item">
-              <p class="cv-year">2009–2014</p>
-              <p class="cv-role">Monteur - Chef Monteur</p>
-              <p class="cv-place">Ankama Productions : web-TV, reportages, bande-annonces, webséries, clips musicaux.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Profil / études</p>
-          <p style="color:var(--muted); margin-bottom:1.5rem;">
-            BTS Montage &amp; Post-Production et Master Cinéma.<br><br>
-            Plus de 15 ans d’expérience entre studio de création (Ankama) et projets freelance.
-          </p>
-
-          <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Compétences clés</p>
-          <p style="color:var(--muted); margin-bottom:1.5rem;">
-            <strong>Techniques :</strong> cadrage, montage, étalonnage, motion léger<br>
-            <strong>Logiciels :</strong> Premiere Pro, After Effects, DaVinci Resolve<br>
-          </p>
-
-          <a href="CV.pdf" class="btn btn-primary" download>📄 Télécharger CV (PDF)</a>
-          <p style="margin-top:0.75rem;">
-            <a href="https://www.linkedin.com/in/cbouveron" target="_blank" rel="noopener">Mon LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Me contacter</h2>
-      <p class="section-subtitle">
-        Parlez-moi de votre projet, je vous réponds sous 24 à 48h.
-      </p>
-      <div class="contact-grid">
-        <div>
-          <form action="https://api.staticforms.dev/submit" method="POST">
-            <!-- Clé API Static Forms -->
-            <input type="hidden" name="accessKey" value="sf_093e250kki9lfg7d4cinh3lk">
-
-            <!-- Adresse qui reçoit les messages -->
-            <input type="hidden" name="email" value="videaction@proton.me">
-
-            <!-- Utiliser l'email du visiteur comme Reply-To -->
-            <input type="hidden" name="replyTo" value="@">
-
-            <!-- URL de redirection après succès (optionnel) -->
-            <input type="hidden" name="redirectTo" value="https://videaction.github.io/merci.html">
-
-            <!-- Champ honeypot anti-spam (doit rester vide) -->
-            <input type="text" name="honeypot" style="display:none">
-
-            <div>
-              <label for="name">Votre nom</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <label for="project">Type de projet</label>
-              <select id="project" name="project">
-                <option>Clip musical</option>
-                <option>Film corporate / institutionnel</option>
-                <option>Événement / aftermovie</option>
-                <option>Contenus réseaux sociaux</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Dites-moi quelques mots sur votre projet, vos objectifs, vos délais…" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Envoyer le message</button>
-          </form>
-        </div>
-        <div class="card">
-          <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Coordonnées</p>
-          <p><strong>📧 E-mail :</strong> <a href="mailto:videaction@proton.me">videaction[at]proton.me</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>© <span id="year"></span> Clément Bouvéron – VIDEACTION.</p>
-    <p style="margin-top:0.5rem; font-size:0.9rem;">Vidéaste freelance – cadrage & montage sur Valenciennes et environs.</p>
-  </div>
-</footer>
-
-<!-- Boutons retour en haut -->
-<button class="back-to-top" id="backToTopBtn" aria-label="Retour en haut">
-  <span>↑</span>
-  <div class="back-to-top-tooltip">En haut</div>
-</button>
-
-<button class="back-to-top-top" id="backToTopTopBtn" aria-label="Retour en haut">
-  <span>↑</span>
-  <div class="back-to-top-top-tooltip">En haut</div>
-</button>
-
-<script>
-  // Année automatique
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Smooth scroll pour les liens d'ancre
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-  });
-
-  // Boutons retour en haut
-  const backToTopBtn = document.getElementById('backToTopBtn');
-  const backToTopTopBtn = document.getElementById('backToTopTopBtn');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 400) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
-    }
-
-    // On affiche le bouton du haut à partir de la zone "Prestations"
-    if (scrollY > 900) {
-      backToTopTopBtn.classList.add('show');
-    } else {
-      backToTopTopBtn.classList.remove('show');
-    }
-  });
-
-  function scrollToTop(e) {
-    e.preventDefault();
-    document.querySelector('#top').scrollIntoView({ behavior: 'smooth' });
-  }
-
-  backToTopBtn.addEventListener('click', scrollToTop);
-  backToTopTopBtn.addEventListener('click', scrollToTop);
-</script>
-
-</body>
-</html>
+          <div
