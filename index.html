@@ -694,6 +694,14 @@
         top: 56px;
       }
     }
+
+    /* Placeholder Wistia tant que le player n'est pas défini */
+    wistia-player[media-id='cf88q5fgww']:not(:defined) {
+      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cf88q5fgww/swatch');
+      display: block;
+      filter: blur(5px);
+      padding-top: 56.25%;
+    }
   </style>
 </head>
 <body id="top">
@@ -856,12 +864,9 @@
       </p>
 
       <div class="video-wrapper" style="margin-bottom: 3.5rem;">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
-                title="Showreel – Clément Bouvéron"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
+        <script src="https://fast.wistia.com/player.js" async></script>
+        <script src="https://fast.wistia.com/embed/cf88q5fgww.js" async type="module"></script>
+        <wistia-player media-id="cf88q5fgww" aspect="1.7777777777777777"></wistia-player>
       </div>
 
       <!-- Entreprises & Collectivités -->
@@ -1012,7 +1017,7 @@
       </p>
       <div class="contact-grid">
         <div>
-          <form action="https://api.staticforms.dev/submit" method="POST">
+          <form action="https://api.staticforms.xyz/submit" method="POST">
             <!-- Clé API Static Forms -->
             <input type="hidden" name="accessKey" value="sf_093e250kki9lfg7d4cinh3lk">
 
