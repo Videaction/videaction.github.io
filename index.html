@@ -5,7 +5,11 @@
   <title>Clément Bouvéron – Vidéaste freelance (cadreur & monteur)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clément Bouvéron, vidéaste freelance spécialisé en cadrage et montage, basé à Valenciennes. Showreel, prestations, CV et contact.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎥</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎥</text></svg>'">
+
+  <!-- Wistia player global -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+
   <style>
     :root {
       --bg: #05060a;
@@ -203,7 +207,6 @@
       font-weight: 600;
     }
 
-    /* Capsule rôle sous le nom */
     .role-tag {
       display: inline-flex;
       align-items: center;
@@ -285,10 +288,6 @@
       padding: 4.5rem 0;
     }
 
-    section:nth-of-type(even) {
-      background: transparent;
-    }
-
     .section-title {
       font-size: clamp(1.5rem, 4vw, 2.3rem);
       margin-bottom: 0.75rem;
@@ -346,7 +345,6 @@
       display: block;
     }
 
-    /* PHOTO DANS LA CARTE HERO DROITE */
     .profile-card {
       display: flex;
       flex-direction: column;
@@ -374,7 +372,6 @@
       display: block;
     }
 
-    /* bloc texte + bouton dans la carte profil */
     .profile-text-and-cta {
       display: flex;
       flex-direction: column;
@@ -447,6 +444,13 @@
       background: radial-gradient(circle at top, #444 0, #000 70%);
       aspect-ratio: 16 / 9;
       position: relative;
+    }
+
+    .project-thumb iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
     }
 
     .project-body {
@@ -610,13 +614,11 @@
       z-index: 60;
     }
 
-    /* bouton du bas : en bas à droite */
     .back-to-top {
       bottom: 20px;
       right: 20px;
     }
 
-    /* bouton du haut : centré, un peu plus près du haut */
     .back-to-top-top {
       top: 60px;
       left: 50%;
@@ -674,7 +676,6 @@
       opacity: 1;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .container {
         padding: 0 1rem;
@@ -695,8 +696,10 @@
       }
     }
 
-    /* Placeholder Wistia tant que le player n'est pas défini */
-    wistia-player[media-id='cf88q5fgww']:not(:defined) {
+    /* Placeholders Wistia (optionnel si tu veux un blur avant chargement) */
+    wistia-player[media-id='cf88q5fgww']:not(:defined),
+    wistia-player[media-id='z2lm1s83tp']:not(:defined),
+    wistia-player[media-id='94u3wxyxyd']:not(:defined) {
       background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cf88q5fgww/swatch');
       display: block;
       filter: blur(5px);
@@ -706,7 +709,7 @@
 </head>
 <body id="top">
 
-<!-- Barre du haut avec logo cliquable -->
+<!-- HEADER -->
 <div class="site-header">
   <div class="site-header-inner">
     <div class="logo-block">
@@ -729,19 +732,15 @@
   <div class="container">
     <div class="hero">
       <div>
-        <!-- Logo large sous la petite bannière -->
         <div class="hero-logo-large">
           <a href="#top">
             <img src="logo-videaction.png" alt="VIDEACTION – logo" class="hero-logo-img">
           </a>
         </div>
-
-        <!-- Nom + rôle -->
         <div class="hero-name-tag-row">
           <p class="hero-subtitle-name">Clément Bouvéron – Vidéaste freelance</p>
         </div>
         <p class="role-tag">Cadrage, Montage &amp; Post-Production</p>
-
         <p class="hero-subtitle">
           Je crée des vidéos claires, rythmées et adaptées à vos besoins :
           clips, interviews, contenus réseaux sociaux, aftermovies et films pour entreprises & collectivités.
@@ -751,8 +750,6 @@
           <a href="#showreel" class="btn btn-primary">Voir un aperçu de mon travail</a>
         </div>
       </div>
-
-      <!-- Carte profil + bouton Me contacter -->
       <div class="card profile-card">
         <div class="profile-photo-wrapper">
           <img src="photo-clement.png" alt="Clément Bouvéron" class="profile-photo">
@@ -783,9 +780,7 @@
       </p>
       <div class="about-grid">
         <div>
-          <p>
-            Bonjour ! Bienvenue sur le site de <strong>Vidéaction</strong>. 
-          </p>
+          <p>Bonjour ! Bienvenue sur le site de <strong>Vidéaction</strong>.</p>
           <p>
             Vidéaction, c'est moi, <strong>Clément</strong>, vidéaste autoentrepreneur spécialisé en cadrage et montage depuis une vingtaine d'années.
             J’ai travaillé 15 ans chez <strong>Ankama</strong> (Dofus, Wakfu,...), acteur majeur du divertissement français sur de multiples projets (jeux-vidéo, films et séries animées...) et ai lancé en parallèle mon autoentreprise en 2017, pour des missions annexes.
@@ -804,7 +799,7 @@
             <p><strong>📍Basé à :</strong> Valenciennes et alentours (Hauts-de-France)</p>
             <p><strong>🎯 Spécialités :</strong> tournage, montage, contenus réseaux sociaux, clips, mappings vidéo</p>
             <p><strong>👥 Clients :</strong> entreprises, collectivités, artistes, agences, écoles</p>
-            <p><strong>🛠️ Matériel :</strong> Caméra 4K & Optiques, enregistrement audio, Lumière, Drone</p>
+            <p><strong>🛠️ Matériel :</strong> Caméra 4K &amp; Optiques, enregistrement audio, Lumière, Drone</p>
           </div>
         </div>
         <div class="card about-photo-card">
@@ -829,7 +824,7 @@
           <p class="service-desc">
             Tournage sur le terrain avec matériel professionnel (caméra 4K, optiques,
             micros HF, éclairage LED). Idéal pour interviews, conférences, événements,
-            reportages pour entreprises & collectivités.
+            reportages pour entreprises &amp; collectivités.
           </p>
           <p class="service-meta">Captation Multicam possible, selon projet.</p>
         </div>
@@ -855,22 +850,22 @@
     </div>
   </section>
 
-  <!-- Showreel -->
+  <!-- Showreel + Projets -->
   <section id="showreel">
     <div class="container">
       <h2 class="section-title">Showreel</h2>
       <p class="section-subtitle">
-        Un aperçu de mon travail dans différents univers : entreprises & collectivités, clips musicaux et bandes-annonce.
+        Un aperçu de mon travail dans différents univers : entreprises &amp; collectivités, clips musicaux et bandes-annonce.
       </p>
 
+      <!-- Showreel Wistia -->
       <div class="video-wrapper" style="margin-bottom: 3.5rem;">
-        <script src="https://fast.wistia.com/player.js" async></script>
         <script src="https://fast.wistia.com/embed/cf88q5fgww.js" async type="module"></script>
         <wistia-player media-id="cf88q5fgww" aspect="1.7777777777777777"></wistia-player>
       </div>
 
-     <!-- Entreprises & Collectivités -->
-      <h3 style="font-size:1.5rem; margin-bottom:1rem;">Entreprises & Collectivités</h3>
+      <!-- Entreprises & Collectivités -->
+      <h3 style="font-size:1.5rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
       <p style="color:var(--muted); margin-bottom:1.5rem; max-width:700px;">
         Films pour entreprises, collectivités, associations et organismes : interviews, conférences,
         événements, films de présentation ou projets réalisés dans le cadre d’appels d’offres.
@@ -880,29 +875,35 @@
         <!-- Carte 1 : Wistia -->
         <div class="project-card">
           <div class="project-thumb" style="padding:0; background:#000;">
-            <script src="https://fast.wistia.com/player.js" async></script>
             <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" async type="module"></script>
             <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
           </div>
           <div class="project-body">
             <p class="project-title">Film présentation de collab – école ESMOD</p>
-            <p class="project-type">Corporate / Tournage & Montage</p>
+            <p class="project-type">Corporate / Tournage &amp; Montage</p>
           </div>
         </div>
 
-        <!-- Carte 2 : lien YouTube -->
-        <a class="project-card" href="https://www.youtube.com/watch?v=dKBiMblJibs" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
+        <!-- Carte 2 : YouTube EMBED -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
+              title="Evènement - GameCamp 2023"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
             <p class="project-title">Evènement - GameCamp 2023</p>
             <p class="project-type">Captation</p>
           </div>
-        </a>
+        </div>
 
         <!-- Carte 3 : Wistia -->
         <div class="project-card">
           <div class="project-thumb" style="padding:0; background:#000;">
-            <script src="https://fast.wistia.com/player.js" async></script>
             <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" async type="module"></script>
             <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
           </div>
@@ -919,27 +920,56 @@
         Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
       </p>
       <div class="projects-grid">
-        <a class="project-card" href="https://www.youtube.com/watch?v=HFKDj80Pqrk&list=RDHFKDj80Pqrk" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
+        <!-- Clip 1 -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/HFKDj80Pqrk?rel=0&modestbranding=1&playsinline=1"
+              title='Clip – Casanova - "Nos Antipodes"'
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
             <p class="project-title">Clip – Casanova - "Nos Antipodes" (The Voice 2018)</p>
-            <p class="project-type">Réalisation & Montage</p>
+            <p class="project-type">Réalisation &amp; Montage</p>
           </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=XsEYWD5c78k" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
+        </div>
+
+        <!-- Clip 2 -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/XsEYWD5c78k?rel=0&modestbranding=1&playsinline=1"
+              title='Clip – Trois Vagues - "Hit Parade"'
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
             <p class="project-title">Clip – Trois Vagues - "Hit Parade"</p>
-            <p class="project-type">Tournage, Montage & PostProd</p>
+            <p class="project-type">Tournage, Montage &amp; PostProd</p>
           </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=AkchxdyLWwI" rel="noopener">
-          <div class="project-thumb"></div>
+        </div>
+
+        <!-- Clip 3 -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/AkchxdyLWwI?rel=0&modestbranding=1&playsinline=1"
+              title='III Vagues Session live Cover PNL - "à l&apos;ammoniaque"'
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
             <p class="project-title">III Vagues Session live Cover PNL - "à l'ammoniaque"</p>
-            <p class="project-type">Captation multi-caméras & Montage</p>
+            <p class="project-type">Captation multi-caméras &amp; Montage</p>
           </div>
-        </a>
+        </div>
       </div>
 
       <!-- Bandes-annonce -->
@@ -948,27 +978,56 @@
         Bandes-annonce de films, séries, ou jeux vidéo.
       </p>
       <div class="projects-grid">
-        <a class="project-card" href="https://www.youtube.com/watch?v=8IN7a0GNNJw" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
+        <!-- BA 1 -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/8IN7a0GNNJw?rel=0&modestbranding=1&playsinline=1"
+              title="Bande-annonce – DOFUS Le Film"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
             <p class="project-title">Bande-annonce – DOFUS Le Film</p>
             <p class="project-type">Montage Cinéma</p>
           </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=Wc8Z_o1xQOc" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
+        </div>
+
+        <!-- BA 2 -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
+              title="Teasing Kickstarter WAKFU"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
             <p class="project-title">Teasing Kickstarter WAKFU</p>
             <p class="project-type">Concept Promo Série</p>
           </div>
-        </a>
-        <a class="project-card" href="https://www.youtube.com/watch?v=Ic3_MAQ77u0" target="_blank" rel="noopener">
-          <div class="project-thumb"></div>
+        </div>
+
+        <!-- BA 3 -->
+        <div class="project-card">
+          <div class="project-thumb" style="padding:0; background:#000;">
+            <iframe
+              src="https://www.youtube.com/embed/Ic3_MAQ77u0?rel=0&modestbranding=1&playsinline=1"
+              title="Trailer One More Gate"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="project-body">
-            <p class="project-title">Trailer One More Gate </p>
+            <p class="project-title">Trailer One More Gate</p>
             <p class="project-type">Communication Internationale</p>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -991,7 +1050,7 @@
             <li class="cv-item">
               <p class="cv-year">2014–2024</p>
               <p class="cv-role">Cadreur-Monteur / Technicien Vidéo</p>
-              <p class="cv-place">Ankama Studio – Marketing & Communication : vidéos corporate, R&D encodage et diffusion web.</p>
+              <p class="cv-place">Ankama Studio – Marketing &amp; Communication : vidéos corporate, R&amp;D encodage et diffusion web.</p>
             </li>
             <li class="cv-item">
               <p class="cv-year">2009–2014</p>
@@ -1032,19 +1091,10 @@
       <div class="contact-grid">
         <div>
           <form action="https://api.staticforms.xyz/submit" method="POST">
-            <!-- Clé API Static Forms -->
             <input type="hidden" name="accessKey" value="sf_093e250kki9lfg7d4cinh3lk">
-
-            <!-- Adresse qui reçoit les messages -->
             <input type="hidden" name="email" value="videaction@proton.me">
-
-            <!-- Utiliser l'email du visiteur comme Reply-To -->
             <input type="hidden" name="replyTo" value="@">
-
-            <!-- URL de redirection après succès (optionnel) -->
             <input type="hidden" name="redirectTo" value="https://videaction.github.io/merci.html">
-
-            <!-- Champ honeypot anti-spam (doit rester vide) -->
             <input type="text" name="honeypot" style="display:none">
 
             <div>
@@ -1085,11 +1135,10 @@
 <footer>
   <div class="container">
     <p>© <span id="year"></span> Clément Bouvéron – VIDEACTION.</p>
-    <p style="margin-top:0.5rem; font-size:0.9rem;">Vidéaste freelance – cadrage & montage sur Valenciennes et environs.</p>
+    <p style="margin-top:0.5rem; font-size:0.9rem;">Vidéaste freelance – cadrage &amp; montage sur Valenciennes et environs.</p>
   </div>
 </footer>
 
-<!-- Boutons retour en haut -->
 <button class="back-to-top" id="backToTopBtn" aria-label="Retour en haut">
   <span>↑</span>
   <div class="back-to-top-tooltip">En haut</div>
@@ -1101,10 +1150,8 @@
 </button>
 
 <script>
-  // Année automatique
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Smooth scroll pour les liens d'ancre
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
@@ -1118,7 +1165,6 @@
     });
   });
 
-  // Boutons retour en haut
   const backToTopBtn = document.getElementById('backToTopBtn');
   const backToTopTopBtn = document.getElementById('backToTopTopBtn');
 
@@ -1131,7 +1177,6 @@
       backToTopBtn.classList.remove('show');
     }
 
-    // On affiche le bouton du haut à partir de la zone "Prestations"
     if (scrollY > 900) {
       backToTopTopBtn.classList.add('show');
     } else {
