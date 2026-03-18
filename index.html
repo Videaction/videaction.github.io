@@ -468,6 +468,7 @@
     position: relative;
   }
 
+  .project-thumb iframe,
   .project-thumb iframe {
     width: 100%;
     height: 100%;
@@ -760,10 +761,11 @@
     }
   }
 
-  /* Placeholders Wistia */
+  /* Placeholders Wistia (showreel + ux/esmod/hxnfjv3lup si besoin) */
   wistia-player[media-id='cf88q5fgww']:not(:defined),
   wistia-player[media-id='z2lm1s83tp']:not(:defined),
-  wistia-player[media-id='94u3wxyxyd']:not(:defined) {
+  wistia-player[media-id='94u3wxyxyd']:not(:defined),
+  wistia-player[media-id='hxnfjv3lup']:not(:defined) {
     background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cf88q5fgww/swatch');
     display: block;
     filter: blur(5px);
@@ -789,7 +791,6 @@
     <div class="site-header-inner">
       <div class="logo-block">
         <a href="#top" class="logo-link">
-          <!-- ALT plus descriptif -->
           <img src="logo-videaction.png" alt="Logo VIDEACTION - Clément Bouvéron vidéaste" class="logo-img">
           <span class="logo-text">VIDEACTION</span>
         </a>
@@ -810,7 +811,6 @@
         <div>
           <div class="hero-logo-large">
             <a href="#top">
-              <!-- ALT plus descriptif -->
               <img src="logo-videaction.png" alt="Logo VIDEACTION - Clément Bouvéron vidéaste" class="hero-logo-img">
             </a>
           </div>
@@ -1045,52 +1045,6 @@
           </div>
         </div>
 
-        <!-- Séries -->
-        <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
-        <div class="projects-grid ba-grid">
-          <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/fJRGLJv2PnI?rel=0&modestbranding=1&playsinline=1"
-                      title="Baidir – Trailer série"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <div class="project-body">
-              <p class="project-title">Baidir – Série animée</p>
-              <p class="project-type">Trailer série</p>
-            </div>
-          </div>
-
-          <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/EvfrNKvEgqY?rel=0&modestbranding=1&playsinline=1"
-                      title="Kerubim – Série"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <div class="project-body">
-              <p class="project-title">Kerubim – Série</p>
-              <p class="project-type">Teaser / trailer série</p>
-            </div>
-          </div>
-
-          <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
-                      title="Teasing Kickstarter WAKFU"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <div class="project-body">
-              <p class="project-title">Teasing Kickstarter WAKFU</p>
-              <p class="project-type">Concept promo série</p>
-            </div>
-          </div>
-        </div>
-
         <!-- Entreprises & Collectivités -->
         <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
         <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
@@ -1099,94 +1053,48 @@
         </p>
 
         <div class="projects-grid">
-          <!-- Carte 1 : Wistia -->
+          <!-- 1 : YouTube -->
           <div class="project-card">
             <div class="project-thumb">
-              <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" defer type="module"></script>
-              <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
+              <iframe src="https://www.youtube.com/embed/9PH4y-OErDo?rel=0&modestbranding=1&playsinline=1"
+                      title="Film entreprises & collectivités - YouTube"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
             </div>
             <div class="project-body">
-              <p class="project-title">Film de présentation – école ESMOD</p>
+              <p class="project-title">Film institutionnel – YouTube</p>
               <p class="project-type">Corporate / tournage &amp; montage</p>
             </div>
           </div>
 
-          <!-- Carte 2 : YouTube -->
+          <!-- 2 : Vimeo -->
           <div class="project-card">
             <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
-                      title="Evènement - GameCamp 2023"
+              <iframe src="https://player.vimeo.com/video/480555642"
+                      title="Film entreprises & collectivités - Vimeo"
                       loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="autoplay; fullscreen; picture-in-picture"
                       allowfullscreen></iframe>
             </div>
             <div class="project-body">
-              <p class="project-title">Évènement – GameCamp 2023</p>
-              <p class="project-type">Captation</p>
+              <p class="project-title">Film institutionnel – Vimeo</p>
+              <p class="project-type">Film de présentation &amp; communication</p>
             </div>
           </div>
 
-          <!-- Carte 3 : Wistia -->
+          <!-- 3 : Wistia hxnfjv3lup -->
           <div class="project-card">
             <div class="project-thumb">
-              <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" defer type="module"></script>
-              <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
+              <script src="https://fast.wistia.com/embed/hxnfjv3lup.js" defer type="module"></script>
+              <wistia-player media-id="hxnfjv3lup" aspect="1.7777777777777777"></wistia-player>
             </div>
             <div class="project-body">
-              <p class="project-title">Reportage – UX Camp 2024</p>
-              <p class="project-type">Captation événement professionnel &amp; montage recap</p>
+              <p class="project-title">Reportage – Entreprises &amp; Collectivités</p>
+              <p class="project-type">Reportage terrain &amp; montage</p>
             </div>
           </div>
         </div>
-
-        <!-- Entreprises & Collectivités supplémentaires (placeholders gardés) -->
-        <div class="projects-grid hidden" id="more-business">
-          <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/ddddddddddd?rel=0&modestbranding=1&playsinline=1"
-                      title="Corporate placeholder 1"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <div class="project-body">
-              <p class="project-title">Corporate placeholder 1</p>
-              <p class="project-type">Tournage &amp; montage</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/eeeeeeeeeee?rel=0&modestbranding=1&playsinline=1"
-                      title="Corporate placeholder 2"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <div class="project-body">
-              <p class="project-title">Corporate placeholder 2</p>
-              <p class="project-type">Interview &amp; montage</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/fffffffffff?rel=0&modestbranding=1&playsinline=1"
-                      title="Corporate placeholder 3"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <div class="project-body">
-              <p class="project-title">Corporate placeholder 3</p>
-              <p class="project-type">Film institutionnel</p>
-            </div>
-          </div>
-        </div>
-
-        <button class="btn btn-secondary see-more-btn" data-target="#more-business">
-          Voir plus ↓
-        </button>
 
         <!-- Clips musicaux -->
         <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Clips musicaux</h3>
@@ -1194,7 +1102,9 @@
           Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
         </p>
 
+        <!-- 1-3 visibles -->
         <div class="projects-grid">
+          <!-- 1 : Casanova -->
           <div class="project-card">
             <div class="project-thumb">
               <iframe src="https://www.youtube.com/embed/HFKDj80Pqrk?rel=0&modestbranding=1&playsinline=1"
@@ -1209,6 +1119,7 @@
             </div>
           </div>
 
+          <!-- 2 : Trois Vagues - Hit Parade -->
           <div class="project-card">
             <div class="project-thumb">
               <iframe src="https://www.youtube.com/embed/XsEYWD5c78k?rel=0&modestbranding=1&playsinline=1"
@@ -1223,26 +1134,27 @@
             </div>
           </div>
 
+          <!-- 3 : Trill-Dan - Hangyaku Zenya -->
           <div class="project-card">
             <div class="project-thumb">
-              <iframe src="https://www.youtube.com/watch?v=EfQ5G9iijZ4"
-                      title='Trill-Dan - "Hangyaku Zenya"'
+              <iframe src="https://www.youtube.com/embed/EfQ5G9iijZ4?rel=0&modestbranding=1&playsinline=1"
+                      title='Clip – Trill-Dan - "Hangyaku Zenya"'
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen></iframe>
             </div>
             <div class="project-body">
-              <p class="project-title">
-                Trill-Dan - "Hangyaku Zenya"
-              </p>
+              <p class="project-title">Clip – Trill-Dan – "Hangyaku Zenya"</p>
               <p class="project-type">Captation multi‑caméras &amp; montage</p>
             </div>
           </div>
         </div>
 
-        <!-- Clips supplémentaires (placeholders gardés) -->
+        <!-- 4-6 en "voir plus" -->
         <div class="projects-grid hidden" id="more-clips">
-          <div class="project-thumb">
+          <!-- 4 : A l'ammoniaque (III Vagues) -->
+          <div class="project-card">
+            <div class="project-thumb">
               <iframe src="https://www.youtube.com/embed/AkchxdyLWwI?rel=0&modestbranding=1&playsinline=1"
                       title='III Vagues Session live Cover PNL - "à l&apos;ammoniaque"'
                       loading="lazy"
@@ -1250,36 +1162,40 @@
                       allowfullscreen></iframe>
             </div>
             <div class="project-body">
-              <p class="project-title">Session live – Cover PNL "À l'ammoniaque" – III Vagues</p>
+              <p class="project-title">
+                Session live – Cover PNL "À l'ammoniaque" – III Vagues
+              </p>
               <p class="project-type">Captation multi‑caméras &amp; montage</p>
             </div>
           </div>
 
+          <!-- 5 : Le Bonheur - Gauthier Galand & Justine Raux -->
           <div class="project-card">
             <div class="project-thumb">
-              <iframe src="https://www.youtube.com/watch?v=NJ3a7S3bdgc"
-                      title="Le Bonheur - Gauthier Galand & Justine Raux"
+              <iframe src="https://www.youtube.com/embed/NJ3a7S3bdgc?rel=0&modestbranding=1&playsinline=1"
+                      title='Clip – "Le Bonheur" - Gauthier Galand &amp; Justine Raux'
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen></iframe>
             </div>
             <div class="project-body">
-              <p class="project-title">Le Bonheur - Gauthier Galand & Justine Raux</p>
+              <p class="project-title">Clip – "Le Bonheur" – Gauthier Galand &amp; Justine Raux</p>
               <p class="project-type">Réalisation, tournage &amp; montage</p>
             </div>
           </div>
 
+          <!-- 6 : TROIS VAGUES - Des gens heureux -->
           <div class="project-card">
             <div class="project-thumb">
-              <iframe src="https://www.youtube.com/watch?v=QwO56nGwaYo"
-                      title="TROIS VAGUES - Des gens heureux"
+              <iframe src="https://www.youtube.com/embed/QwO56nGwaYo?rel=0&modestbranding=1&playsinline=1"
+                      title='Clip – TROIS VAGUES - "Des gens heureux"'
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen></iframe>
             </div>
             <div class="project-body">
-              <p class="project-title">TROIS VAGUES - Des gens heureux</p>
-              <p class="project-type">Réalisation, tournage &amp; montage</p>
+              <p class="project-title">Clip – TROIS VAGUES – "Des gens heureux"</p>
+              <p class="project-type">Tournage &amp; montage</p>
             </div>
           </div>
         </div>
@@ -1416,7 +1332,7 @@
     </div>
   </footer>
 
-  <!-- Boutons retour en haut, mieux labellisés -->
+  <!-- Boutons retour en haut -->
   <button class="back-to-top" id="backToTopBtn" aria-label="Retour en haut de page">
     <span aria-hidden="true">↑</span>
     <div class="back-to-top-tooltip">En haut</div>
