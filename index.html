@@ -468,7 +468,6 @@
     position: relative;
   }
 
-  .project-thumb iframe,
   .project-thumb iframe {
     width: 100%;
     height: 100%;
@@ -761,7 +760,7 @@
     }
   }
 
-  /* Placeholders Wistia (showreel + ux/esmod/hxnfjv3lup si besoin) */
+  /* Placeholders Wistia (showreel + z2lm1s83tp + 94u3wxyxyd + hxnfjv3lup) */
   wistia-player[media-id='cf88q5fgww']:not(:defined),
   wistia-player[media-id='z2lm1s83tp']:not(:defined),
   wistia-player[media-id='94u3wxyxyd']:not(:defined),
@@ -1045,6 +1044,52 @@
           </div>
         </div>
 
+        <!-- Séries -->
+        <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
+        <div class="projects-grid ba-grid">
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/fJRGLJv2PnI?rel=0&modestbranding=1&playsinline=1"
+                      title="Baidir – Trailer série"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Baidir – Série animée</p>
+              <p class="project-type">Trailer série</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/EvfrNKvEgqY?rel=0&modestbranding=1&playsinline=1"
+                      title="Kerubim – Série"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Kerubim – Série</p>
+              <p class="project-type">Teaser / trailer série</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
+                      title="Teasing Kickstarter WAKFU"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Teasing Kickstarter WAKFU</p>
+              <p class="project-type">Concept promo série</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Entreprises & Collectivités -->
         <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
         <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
@@ -1052,8 +1097,51 @@
           films de présentation ou communication officielle.
         </p>
 
+        <!-- 3 cartes visibles comme au départ -->
         <div class="projects-grid">
-          <!-- 1 : YouTube -->
+          <!-- Carte 1 : Wistia z2lm1s83tp -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" defer type="module"></script>
+              <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Film de présentation – école ESMOD</p>
+              <p class="project-type">Corporate / tournage &amp; montage</p>
+            </div>
+          </div>
+
+          <!-- Carte 2 : YouTube GameCamp 2023 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
+                      title="Evènement - GameCamp 2023"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Évènement – GameCamp 2023</p>
+              <p class="project-type">Captation</p>
+            </div>
+          </div>
+
+          <!-- Carte 3 : Wistia 94u3wxyxyd -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" defer type="module"></script>
+              <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Reportage – UX Camp 2024</p>
+              <p class="project-type">Captation événement professionnel &amp; montage recap</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 nouvelles vidéos en "voir plus" -->
+        <div class="projects-grid hidden" id="more-business">
+          <!-- 4 : YouTube 9PH4y-OErDo -->
           <div class="project-card">
             <div class="project-thumb">
               <iframe src="https://www.youtube.com/embed/9PH4y-OErDo?rel=0&modestbranding=1&playsinline=1"
@@ -1068,7 +1156,7 @@
             </div>
           </div>
 
-          <!-- 2 : Vimeo -->
+          <!-- 5 : Vimeo 480555642 -->
           <div class="project-card">
             <div class="project-thumb">
               <iframe src="https://player.vimeo.com/video/480555642"
@@ -1083,7 +1171,7 @@
             </div>
           </div>
 
-          <!-- 3 : Wistia hxnfjv3lup -->
+          <!-- 6 : Wistia hxnfjv3lup -->
           <div class="project-card">
             <div class="project-thumb">
               <script src="https://fast.wistia.com/embed/hxnfjv3lup.js" defer type="module"></script>
@@ -1095,6 +1183,10 @@
             </div>
           </div>
         </div>
+
+        <button class="btn btn-secondary see-more-btn" data-target="#more-business">
+          Voir plus ↓
+        </button>
 
         <!-- Clips musicaux -->
         <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Clips musicaux</h3>
