@@ -11,7 +11,6 @@
   <meta property="og:description" content="Vidéaste freelance basé à Valenciennes : clips, corporate, aftermovies, bandes-annonces. Showreel, prestations et contact.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="logo-videaction.png">
-  <!-- Mets ici ton URL finale -->
   <meta property="og:url" content="https://videaction.github.io/">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎥</text></svg>'">
@@ -35,799 +34,8 @@
   }
   </script>
 
-  <style>
-  :root {
-    --bg: #05060a;
-    --text: #f5f5f5;
-    --accent: #c0392b;
-    --muted: #a0a0a0;
-    --card: #111318;
-    --shadow: 0 18px 45px rgba(0,0,0,0.75);
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html, body {
-    height: 100%;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
-    background: radial-gradient(circle at top, #171b2a 0, #05060a 55%, #000000 100%);
-    color: var(--text);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  a:hover {
-    opacity: 0.9;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  /* HEADER GLOBAL (logo + nav) */
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(14px);
-    background: linear-gradient(to bottom, rgba(5,6,10,0.95), rgba(5,6,10,0.6));
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .site-header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .logo-block {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .logo-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: inherit;
-  }
-
-  .logo-img {
-    height: 32px;
-    width: auto;
-    display: block;
-  }
-
-  .logo-text {
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .main-nav {
-    display: flex;
-    gap: 1.25rem;
-    font-size: 0.9rem;
-  }
-
-  .main-nav a {
-    color: var(--muted);
-    font-weight: 500;
-  }
-
-  .main-nav a:hover {
-    color: var(--text);
-  }
-
-  @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-    }
-    .site-header-inner {
-      padding-inline: 1rem;
-    }
-  }
-
-  /* HERO */
-  header {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 0 2rem;
-  }
-
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
-    gap: 3rem;
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 2rem;
-    }
-  }
-
-  .hero-logo-large {
-    margin-bottom: 1.8rem;
-  }
-
-  .hero-logo-img {
-    max-width: 360px;
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(0 12px 35px rgba(0,0,0,0.8));
-  }
-
-  @media (max-width: 768px) {
-    .hero-logo-large {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  .hero-name-tag-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.4rem;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
-    .hero-name-tag-row {
-      justify-content: center;
-      text-align: center;
-    }
-  }
-
-  .hero-subtitle-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .role-tag {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.35rem 0.8rem;
-    font-size: 0.85rem;
-    border-radius: 999px;
-    background: rgba(192,57,43,0.16);
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    margin-top: 0.35rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-    color: var(--muted);
-    margin-top: 0.6rem;
-    margin-bottom: 1.75rem;
-    max-width: 520px;
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero-subtitle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero-buttons {
-      justify-content: center;
-    }
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.85rem 1.7rem;
-    border-radius: 999px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #ffffff;
-    box-shadow: var(--shadow);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 22px 55px rgba(0,0,0,0.9);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--text);
-    border: 1px solid rgba(255,255,255,0.22);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(255,255,255,0.04);
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 4rem 0;
-  }
-
-  #showreel {
-    padding-top: 3.5rem;
-    padding-bottom: 4rem;
-  }
-
-  .section-title {
-    font-size: clamp(1.5rem, 4vw, 2.3rem);
-    margin-bottom: 0.75rem;
-    text-align: center;
-  }
-
-  .section-subtitle {
-    color: var(--muted);
-    margin-bottom: 3rem;
-    text-align: center;
-    font-size: 1.05rem;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    gap: 3rem;
-  }
-
-  @media (min-width: 900px) {
-    .about-grid {
-      grid-template-columns: 1.7fr 1.3fr;
-    }
-  }
-
-  .about-photo-card {
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .about-photo-wrapper {
-    width: 100%;
-    height: 100%;
-    max-height: 340px;
-    overflow: hidden;
-    border-radius: 20px;
-  }
-
-  .about-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  .profile-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .profile-photo-wrapper {
-    width: 128px;
-    height: 128px;
-    border-radius: 999px;
-    overflow: hidden;
-    border: 2px solid rgba(255,255,255,0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-  }
-
-  .profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 0%;
-    display: block;
-  }
-
-  .profile-text-and-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    width: 100%;
-  }
-
-  .profile-cta-btn {
-    align-self: flex-end;
-  }
-
-  @media (max-width: 768px) {
-    .profile-card {
-      align-items: center;
-      text-align: center;
-    }
-    .profile-text-and-cta {
-      align-items: center;
-      text-align: center;
-    }
-    .profile-cta-btn {
-      align-self: center;
-    }
-  }
-
-  /* SHOWREEL / VIDEOS */
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    margin-bottom: 3rem;
-    background: #000;
-  }
-
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.6rem;
-    margin-top: 1.6rem;
-  }
-
-  .project-card {
-    background: var(--card);
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
-    border: 1px solid rgba(255,255,255,0.05);
-    padding: 0.5rem 0.5rem 0.7rem;
-  }
-
-  .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.9);
-    border-color: rgba(192,57,43,0.45);
-  }
-
-  .project-thumb {
-    background: radial-gradient(circle at top, #444 0, #000 70%);
-    aspect-ratio: 16 / 9;
-    position: relative;
-  }
-
-  .project-thumb iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-  }
-
-  .project-body {
-    padding: 0.45rem 0.6rem 0.5rem;
-  }
-
-  .project-title {
-    font-weight: 700;
-    margin-bottom: 0.12rem;
-    font-size: 0.98rem;
-  }
-
-  .project-type {
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-
-  /* Variantes Bandes-annonces */
-  .projects-grid.ba-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .project-card.ba-card {
-    border-radius: 12px;
-    padding: 0.25rem 0.25rem 0.4rem;
-  }
-
-  .project-card.ba-card .project-thumb {
-    aspect-ratio: 16 / 9;
-    background: #000;
-  }
-
-  .project-card.ba-card .project-body {
-    padding: 0.3rem 0.4rem 0.35rem;
-  }
-
-  .project-card.ba-card .project-title {
-    font-size: 0.86rem;
-    margin-bottom: 0.08rem;
-  }
-
-  .project-card.ba-card .project-type {
-    font-size: 0.76rem;
-  }
-
-  .ba-subtitle {
-    color: var(--muted);
-    margin-bottom: 0.5rem;
-    max-width: 700px;
-  }
-
-  .ba-subheading {
-    font-size: 1.05rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0.2rem;
-  }
-
-  /* Barres rouges pour titres de sous-sections */
-  .showreel-subsection-title {
-    display: block;
-    padding: 0.3rem 0.9rem;
-    border: 1px solid var(--accent);
-    border-radius: 999px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    background: var(--accent);
-    color: #ffffff;
-  }
-
-  /* SERVICES */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-title {
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    font-size: 1.15rem;
-  }
-
-  .service-desc {
-    color: var(--muted);
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    font-size: 0.98rem;
-  }
-
-  .service-meta {
-    font-size: 0.9rem;
-    color: var(--muted);
-    font-style: italic;
-  }
-
-  /* CV */
-  .cv-grid {
-    display: grid;
-    gap: 3rem;
-  }
-
-  @media (min-width: 800px) {
-    .cv-grid {
-      grid-template-columns: 2fr 1fr;
-    }
-  }
-
-  .cv-list {
-    list-style: none;
-  }
-
-  .cv-item {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .cv-item:last-child {
-    border-bottom: none;
-  }
-
-  .cv-year {
-    font-size: 0.9rem;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-  }
-
-  .cv-role {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-  }
-
-  .cv-place {
-    font-size: 0.95rem;
-    color: var(--muted);
-  }
-
-  /* CONTACT */
-  .contact-grid {
-    display: grid;
-    gap: 3rem;
-  }
-
-  @media (min-width: 800px) {
-    .contact-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  form {
-    display: grid;
-    gap: 1.25rem;
-  }
-
-  label {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    display: block;
-    font-size: 0.9rem;
-  }
-
-  input, textarea, select {
-    width: 100%;
-    padding: 0.9rem 1.1rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.18);
-    font: inherit;
-    font-size: 0.98rem;
-    background: rgba(5,6,10,0.9);
-    color: var(--text);
-    transition: border-color 0.2s ease, background-color 0.2s ease;
-  }
-
-  input:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: var(--accent);
-    background: rgba(10,12,18,1);
-  }
-
-  textarea {
-    min-height: 140px;
-    resize: vertical;
-  }
-
-  /* FOOTER */
-  footer {
-    padding: 3rem 0 2rem;
-    text-align: center;
-    color: var(--muted);
-    border-top: 1px solid rgba(255,255,255,0.08);
-    background: rgba(0,0,0,0.7);
-  }
-
-  /* BOUTONS RETOUR EN HAUT */
-  .back-to-top,
-  .back-to-top-top {
-    position: fixed;
-    width: 44px;
-    height: 44px;
-    border-radius: 999px;
-    border: none;
-    background: rgba(0,0,0,0.75);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 14px 35px rgba(0,0,0,0.9);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-    z-index: 60;
-  }
-
-  .back-to-top {
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .back-to-top-top {
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .back-to-top:hover {
-    transform: translateY(-2px);
-    background: rgba(0,0,0,0.9);
-  }
-
-  .back-to-top-top:hover {
-    transform: translateX(-50%) translateY(-2px);
-    background: rgba(0,0,0,0.9);
-  }
-
-  .back-to-top.show,
-  .back-to-top-top.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .back-to-top span,
-  .back-to-top-top span {
-    font-size: 1.3rem;
-    line-height: 1;
-  }
-
-  .back-to-top-tooltip,
-  .back-to-top-top-tooltip {
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    background: rgba(0,0,0,0.9);
-    color: #fff;
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.7rem;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-  }
-
-  .back-to-top-tooltip {
-    bottom: 52px;
-  }
-
-  .back-to-top-top-tooltip {
-    top: 52px;
-  }
-
-  .back-to-top:hover .back-to-top-tooltip,
-  .back-to-top-top:hover .back-to-top-top-tooltip {
-    opacity: 1;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 0 1rem;
-    }
-    section {
-      padding: 3.5rem 0;
-    }
-    .projects-grid,
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-    .back-to-top {
-      bottom: 16px;
-      right: 16px;
-    }
-    .back-to-top-top {
-      top: 56px;
-    }
-  }
-
-  /* Placeholders Wistia */
-  wistia-player[media-id='cf88q5fgww']:not(:defined),
-  wistia-player[media-id='z2lm1s83tp']:not(:defined),
-  wistia-player[media-id='94u3wxyxyd']:not(:defined),
-  wistia-player[media-id='hxnfjv3lup']:not(:defined) {
-    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cf88q5fgww/swatch');
-    display: block;
-    filter: blur(5px);
-    padding-top: 56.25%;
-  }
-
-  /* Show more / less */
-  .hidden {
-    display: none;
-  }
-
-  .see-more-btn {
-    margin-top: 1.4rem;
-    padding: 0.55rem 1.1rem;
-    font-size: 0.8rem;
-    border-radius: 999px;
-  }
-
-  /* Thumbnails YouTube (toutes sections) */
-  .project-thumb.yt-thumb {
-    cursor: pointer;
-    overflow: hidden;
-  }
-
-  .project-thumb .thumb-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Overlay play commun (YouTube, Wistia, Vimeo) */
-  .project-thumb.thumb-overlay {
-    position: relative;
-    cursor: pointer;
-  }
-
-  .project-thumb .thumb-play {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: #ffffff;
-    text-shadow: 0 0 12px rgba(0,0,0,0.75);
-    background: radial-gradient(circle at center, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-  }
-
-  .project-thumb.yt-thumb:hover .thumb-play,
-  .project-thumb.thumb-overlay:hover .thumb-play,
-  .project-thumb.vimeo-thumb:hover .thumb-play {
-    opacity: 1;
-  }
-
-  .project-thumb.vimeo-thumb {
-    cursor: pointer;
-    overflow: hidden;
-  }
-  </style>
+  <!-- CSS externalisé -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body id="top">
@@ -850,6 +58,7 @@
     </div>
   </div>
 
+  <!-- HERO -->
   <header>
     <div class="container">
       <div class="hero">
@@ -878,9 +87,9 @@
           </div>
           <div class="profile-text-and-cta">
             <div>
-              <h2 style="margin-bottom:0.6rem; font-size:1.2rem;">Disponible pour tous vos futurs projets !</h2>
-              <p style="color:var(--muted); font-size:0.98rem;">
-                Basé à Valenciennes (Hauts-de-France), je me déplace en région pour des <strong>captations</strong> autour de Valenciennes et en région Lilloise. <br>
+              <h2 class="profile-title">Disponible pour tous vos futurs projets !</h2>
+              <p class="profile-intro">
+                Basé à Valenciennes (Hauts-de-France), je me déplace en région pour des <strong>captations</strong> autour de Valenciennes et en région Lilloise.<br>
                 Je travaille également à distance, pour tous vos projets de <strong>montage</strong>, avec des vidéos efficaces et élégantes.
               </p>
             </div>
@@ -909,13 +118,13 @@
             <p>
               Recherchant toujours plus de variété dans mes projets, j'ai pu me diversifier avec la réalisation et montage de clips musicaux, trailers de jeux et de films, la captation de multiples évènements corporate, mais également développer une activité plus engagée, avec plusieurs interventions en milieu scolaire, pour initier les jeunes à l’image (pédagogie autour de la création, vigilance face à la manipulation audio-visuelle...) et aux techniques d’animation (films stop motion, pixilation...).
             </p>
-            <p style="margin-top:1.5rem;">
+            <p class="about-last-paragraph">
               J’aime les images soignées, les montages rythmés et les histoires simples qui parlent directement au public.
               <strong>Mon objectif</strong> : produire des vidéos professionnelles, adaptables à votre audience et à vos supports (web, réseaux sociaux, événementiel).
             </p>
 
-            <div class="card" style="margin-top:1.75rem;">
-              <p style="font-weight:700; margin-bottom:0.75rem; font-size:1.05rem;">Infos rapides</p>
+            <div class="card about-infos-card">
+              <p class="about-infos-title">Infos rapides</p>
               <p><strong>📍Basé à :</strong> Valenciennes et alentours (Hauts-de-France)</p>
               <p><strong>🎯 Spécialités :</strong> tournage, montage, contenus réseaux sociaux, clips, mappings vidéo</p>
               <p><strong>👥 Clients :</strong> entreprises, collectivités, artistes, agences, écoles</p>
@@ -985,9 +194,7 @@
         </div>
 
         <!-- Bandes-annonces -->
-        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-bottom:0.75rem;">
-          Bandes-annonces
-        </h3>
+        <h3 class="showreel-subsection-title">Bandes-annonces</h3>
         <p class="ba-subtitle">Bandes-annonces de films, séries, et jeux vidéo.</p>
 
         <!-- Films -->
@@ -1028,7 +235,7 @@
         </div>
 
         <!-- Jeux vidéo -->
-        <h4 class="ba-subheading" style="margin-top:0.9rem;">Jeux vidéo</h4>
+        <h4 class="ba-subheading ba-subheading--spaced">Jeux vidéo</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
             <div class="project-thumb yt-thumb">
@@ -1065,7 +272,7 @@
         </div>
 
         <!-- Séries -->
-        <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
+        <h4 class="ba-subheading ba-subheading--spaced">Séries</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
             <div class="project-thumb yt-thumb">
@@ -1102,10 +309,10 @@
         </div>
 
         <!-- Entreprises & Collectivités -->
-        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
+        <h3 class="showreel-subsection-title showreel-subsection-title--spaced">
           Entreprises &amp; Collectivités
         </h3>
-        <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
+        <p class="showreel-subsection-text">
           Films pour entreprises, collectivités, associations et organismes : interviews, conférences, événements, films de présentation ou communication officielle.
         </p>
 
@@ -1164,7 +371,7 @@
             </div>
           </div>
 
-          <!-- 5 : Vimeo 480555642 -> thumbnail + iframe au clic -->
+          <!-- 5 : Vimeo 480555642 -->
           <div class="project-card">
             <div class="project-thumb vimeo-thumb" data-vimeo-id="480555642">
               <div class="thumb-image" style="background-image:url('https://i.vimeocdn.com/video/998007454-c4767bed4407ce4370ed891f95199cabc5d8b9bc460bf8a8ecabb7acf6c54bb8-d_1920x1080?region=us');"></div>
@@ -1195,10 +402,10 @@
         </button>
 
         <!-- Clips musicaux -->
-        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
+        <h3 class="showreel-subsection-title showreel-subsection-title--spaced">
           Clips musicaux
         </h3>
-        <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
+        <p class="showreel-subsection-text">
           Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
         </p>
 
@@ -1287,6 +494,7 @@
         </button>
       </div>
     </section>
+
     <!-- CV -->
     <section id="cv">
       <div class="container">
@@ -1323,22 +531,22 @@
             </ul>
           </div>
 
-          <div class="card">
-            <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Profil / études</p>
-            <p style="color:var(--muted); margin-bottom:1.5rem;">
+          <div class="card cv-card-side">
+            <p class="cv-block-title">Profil / études</p>
+            <p class="cv-block-text">
               BTS Montage &amp; Post-Production et Master Cinéma.<br><br>
               Plus de 15 ans d’expérience entre studio de création (Ankama) et projets freelance.
             </p>
 
-            <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Compétences clés</p>
-            <p style="color:var(--muted); margin-bottom:1.5rem;">
+            <p class="cv-block-title">Compétences clés</p>
+            <p class="cv-block-text">
               <strong>Techniques :</strong> cadrage, montage, étalonnage, motion léger<br>
               <strong>Logiciels :</strong> Premiere Pro, After Effects, DaVinci Resolve<br>
             </p>
 
             <a href="CV.pdf" class="btn btn-primary" download>📄 Télécharger CV (PDF)</a>
-            <p style="margin-top:0.75rem;">
-              <a href="https://www.linkedin.com/in/cbouveron" target="_blank" rel="noopener">Mon LinkedIn</a>
+            <p class="cv-linkedin">
+              <a href="https://www.linkedin.com/in/cbouveron" target="_blank" rel="noopener noreferrer">Mon LinkedIn</a>
             </p>
           </div>
         </div>
@@ -1360,7 +568,7 @@
               <input type="hidden" name="email" value="videaction@proton.me">
               <input type="hidden" name="replyTo" value="@">
               <input type="hidden" name="redirectTo" value="https://videaction.github.io/merci.html">
-              <input type="text" name="honeypot" style="display:none">
+              <input type="text" name="honeypot" class="honeypot">
 
               <div>
                 <label for="name">Votre nom</label>
@@ -1392,8 +600,8 @@
             </form>
           </div>
 
-          <div class="card">
-            <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Coordonnées</p>
+          <div class="card contact-card-side">
+            <p class="contact-title">Coordonnées</p>
             <p><strong>📧 E-mail :</strong> <a href="mailto:videaction@proton.me">videaction[at]proton.me</a></p>
           </div>
         </div>
@@ -1404,7 +612,7 @@
   <footer>
     <div class="container">
       <p>© <span id="year"></span> Clément Bouvéron – VIDEACTION.</p>
-      <p style="margin-top:0.5rem; font-size:0.9rem;">
+      <p class="footer-subtitle">
         Vidéaste freelance – cadrage &amp; montage sur Valenciennes et environs.
       </p>
     </div>
@@ -1446,17 +654,8 @@
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
-    if (scrollY > 400) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
-    }
-
-    if (scrollY > 900) {
-      backToTopTopBtn.classList.add('show');
-    } else {
-      backToTopTopBtn.classList.remove('show');
-    }
+    backToTopBtn.classList.toggle('show', scrollY > 400);
+    backToTopTopBtn.classList.toggle('show', scrollY > 900);
   });
 
   function scrollToTop(e) {
@@ -1480,9 +679,7 @@
     });
   });
 
-  // ---------- LECTURE AU CLIC SUR LE PLAY ----------
-
-  // 1) YouTube : thumbnails -> iframe autoplay
+  // YouTube : thumbnails -> iframe autoplay
   document.querySelectorAll('.project-thumb.yt-thumb').forEach(thumb => {
     thumb.addEventListener('click', () => {
       const imgDiv = thumb.querySelector('.thumb-image');
@@ -1504,13 +701,12 @@
     });
   });
 
-  // 2) Wistia : clic sur ▶, overlay retiré pendant la lecture, puis remis en fin
+  // Wistia : clic sur ▶, overlay retiré pendant la lecture, puis remis en fin
   document.querySelectorAll('.project-thumb.thumb-overlay').forEach(wrapper => {
     const wistiaEl = wrapper.querySelector('wistia-player');
     const thumbPlay = wrapper.querySelector('.thumb-play');
     if (!wistiaEl || !thumbPlay) return;
 
-    // On mémorise l'état initial de l'overlay
     const initialOverlayHTML = thumbPlay.outerHTML;
     const initialHasOverlayClass = wrapper.classList.contains('thumb-overlay');
 
@@ -1520,25 +716,19 @@
       if (e) e.stopPropagation();
       try {
         wistiaEl.play();
-      } catch (err) {
-        console.warn('Wistia play error', err);
-      }
+      } catch (err) {}
       thumbPlay.remove();
       wrapper.classList.remove('thumb-overlay');
     };
 
     thumbPlay.addEventListener('click', startPlay);
 
-    // Événement de fin via l'API Aurora
     wistiaEl.addEventListener('ended', () => {
       try {
         wistiaEl.currentTime = 0;
         wistiaEl.pause();
-      } catch (err) {
-        console.warn('Wistia reset error', err);
-      }
+      } catch (err) {}
 
-      // On recrée le bouton ▶
       wrapper.insertAdjacentHTML('beforeend', initialOverlayHTML);
       const newThumbPlay = wrapper.querySelector('.thumb-play');
 
@@ -1553,7 +743,7 @@
     });
   });
 
-  // 3) Vimeo : clic sur vignette -> remplace par iframe autoplay
+  // Vimeo : clic sur vignette -> iframe autoplay
   document.querySelectorAll('.project-thumb.vimeo-thumb').forEach(thumb => {
     thumb.addEventListener('click', () => {
       const id = thumb.getAttribute('data-vimeo-id');
