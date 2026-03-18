@@ -285,7 +285,12 @@
 
     /* SECTIONS */
     section {
-      padding: 4.5rem 0;
+      padding: 4rem 0;
+    }
+
+    #showreel {
+      padding-top: 3.5rem;
+      padding-bottom: 4rem;
     }
 
     .section-title {
@@ -420,23 +425,24 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.6rem;
+      margin-top: 1.6rem;
     }
 
     .project-card {
       background: var(--card);
-      border-radius: 20px;
+      border-radius: 18px;
       overflow: hidden;
       box-shadow: var(--shadow);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
       border: 1px solid rgba(255,255,255,0.05);
+      padding: 0.5rem 0.5rem 0.7rem;
     }
 
     .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 26px 60px rgba(0,0,0,0.9);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.9);
       border-color: rgba(192,57,43,0.45);
     }
 
@@ -454,63 +460,61 @@
     }
 
     .project-body {
-      padding: 1.5rem;
+      padding: 0.45rem 0.6rem 0.5rem;
     }
 
     .project-title {
       font-weight: 700;
-      margin-bottom: 0.25rem;
-      font-size: 1.05rem;
+      margin-bottom: 0.12rem;
+      font-size: 0.98rem;
     }
 
     .project-type {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
 
-/* Variantes pour la section Bandes-annonce (cartes très compactes) */
-.projects-grid.ba-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.75rem;            /* peu d'espace entre cartes */
-  margin-top: 0.25rem;
-}
+    /* Variantes pour la section Bandes-annonces (encore plus compactes) */
+    .projects-grid.ba-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.25rem;
+    }
 
-.project-card.ba-card {
-  border-radius: 12px;
-  padding: 0.35rem 0.35rem 0.5rem;      /* quasi pas de padding autour */
-  box-shadow: var(--shadow);
-}
+    .project-card.ba-card {
+      border-radius: 12px;
+      padding: 0.25rem 0.25rem 0.4rem;
+    }
 
-.project-card.ba-card .project-thumb {
-  aspect-ratio: 16 / 9;
-  background: #000;
-}
+    .project-card.ba-card .project-thumb {
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
 
-.project-card.ba-card .project-body {
-  padding: 0.35rem 0.4rem 0.4rem;       /* très peu de padding texte */
-}
+    .project-card.ba-card .project-body {
+      padding: 0.3rem 0.4rem 0.35rem;
+    }
 
-.project-card.ba-card .project-title {
-  font-size: 0.9rem;
-  margin-bottom: 0.1rem;
-}
+    .project-card.ba-card .project-title {
+      font-size: 0.86rem;
+      margin-bottom: 0.08rem;
+    }
 
-.project-card.ba-card .project-type {
-  font-size: 0.78rem;
-}
+    .project-card.ba-card .project-type {
+      font-size: 0.76rem;
+    }
 
-/* Sous-titres BA plus serrés */
-.ba-subtitle {
-  color: var(--muted);
-  margin-bottom: 0.5rem;   /* sous-titre collé aux films */
-  max-width: 700px;
-}
+    .ba-subtitle {
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      max-width: 700px;
+    }
 
-.ba-subheading {
-  font-size: 1.05rem;
-  margin-top: 0.6rem;      /* très peu entre Films / Jeux / Séries */
-  margin-bottom: 0.2rem;
-}
+    .ba-subheading {
+      font-size: 1.05rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.2rem;
+    }
 
     /* SERVICES */
     .services-grid {
@@ -756,7 +760,10 @@
     }
 
     .see-more-btn {
-      margin-top: 1.75rem;
+      margin-top: 1.4rem;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.8rem;
+      border-radius: 999px;
     }
   </style>
 </head>
@@ -908,7 +915,7 @@
     <div class="container">
       <h2 class="section-title">Showreel</h2>
       <p class="section-subtitle">
-        Un aperçu de mon travail dans différents univers : entreprises &amp; collectivités, clips musicaux et bandes-annonce.
+        Un aperçu de mon travail dans différents univers : entreprises &amp; collectivités, clips musicaux et bandes-annonces.
       </p>
 
       <!-- Showreel Wistia -->
@@ -917,18 +924,17 @@
         <wistia-player media-id="cf88q5fgww" aspect="1.7777777777777777"></wistia-player>
       </div>
 
-      <!-- Bandes-annonce (en premier) -->
-      <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">Bandes-annonce</h3>
+      <!-- Bandes-annonces -->
+      <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">Bandes-annonces</h3>
       <p class="ba-subtitle">
-        Bandes-annonce de films, séries, et jeux vidéo.
+        Bandes-annonces de films, séries, et jeux vidéo.
       </p>
 
-      <!-- Sous-catégorie Films -->
+      <!-- Films -->
       <h4 class="ba-subheading">Films</h4>
       <div class="projects-grid ba-grid">
-        <!-- BA Film 1 : DOFUS Le Film -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/8IN7a0GNNJw?rel=0&modestbranding=1&playsinline=1"
               title="Bande-annonce – DOFUS Le Film"
@@ -942,9 +948,8 @@
           </div>
         </div>
 
-        <!-- BA Film 2 : Princesse Dragon OST -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/_SoUNNF11pw?rel=0&modestbranding=1&playsinline=1"
               title="Princesse Dragon – OST"
@@ -954,13 +959,12 @@
           </div>
           <div class="project-body">
             <p class="project-title">Princesse Dragon – Bande originale</p>
-            <p class="project-type">Montage bande-son / Extrait film</p>
+            <p class="project-type">Montage bande-son / extrait film</p>
           </div>
         </div>
 
-        <!-- BA Film 3 : Mutafukaz -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/TXgVY7IVljM?rel=0&modestbranding=1&playsinline=1"
               title="Mutafukaz – Bande-annonce"
@@ -975,12 +979,11 @@
         </div>
       </div>
 
-      <!-- Sous-catégorie Jeux vidéo -->
-      <h4 class="ba-subheading" style="margin-top:2.25rem;">Jeux vidéo</h4>
+      <!-- Jeux vidéo -->
+      <h4 class="ba-subheading" style="margin-top:0.9rem;">Jeux vidéo</h4>
       <div class="projects-grid ba-grid">
-        <!-- Jeu 1 : One More Gate -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/Ic3_MAQ77u0?rel=0&modestbranding=1&playsinline=1"
               title="Trailer One More Gate"
@@ -994,9 +997,8 @@
           </div>
         </div>
 
-        <!-- Jeu 2 : DOFUS Temporis Retro -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/b-lrH2-JKj8?rel=0&modestbranding=1&playsinline=1"
               title="Trailer – DOFUS Temporis Retro"
@@ -1010,9 +1012,8 @@
           </div>
         </div>
 
-        <!-- Jeu 3 : SUPER NANO BLASTER -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/qa3eG3KYRJ4?rel=0&modestbranding=1&playsinline=1"
               title="SUPER NANO BLASTER – Trailer"
@@ -1027,12 +1028,11 @@
         </div>
       </div>
 
-      <!-- Sous-catégorie Séries -->
-      <h4 class="ba-subheading" style="margin-top:2.25rem;">Séries</h4>
+      <!-- Séries -->
+      <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
       <div class="projects-grid ba-grid">
-        <!-- Série 1 : Baidir -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/fJRGLJv2PnI?rel=0&modestbranding=1&playsinline=1"
               title="Baidir – Trailer série"
@@ -1046,9 +1046,8 @@
           </div>
         </div>
 
-        <!-- Série 2 : Kerubim -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/EvfrNKvEgqY?rel=0&modestbranding=1&playsinline=1"
               title="Kerubim – Série"
@@ -1062,9 +1061,8 @@
           </div>
         </div>
 
-        <!-- Série 3 : Teasing Kickstarter WAKFU -->
         <div class="project-card ba-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
               title="Teasing Kickstarter WAKFU"
@@ -1080,8 +1078,8 @@
       </div>
 
       <!-- Entreprises & Collectivités -->
-      <h3 style="font-size:1.5rem; margin-top:3.2rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
-      <p style="color:var(--muted); margin-bottom:1.4rem; max-width:700px;">
+      <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
+      <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
         Films pour entreprises, collectivités, associations et organismes : interviews, conférences,
         événements, films de présentation ou communication officielle.
       </p>
@@ -1089,7 +1087,7 @@
       <div class="projects-grid">
         <!-- Carte 1 : Wistia -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" async type="module"></script>
             <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
           </div>
@@ -1101,7 +1099,7 @@
 
         <!-- Carte 2 : YouTube -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
               title="Evènement - GameCamp 2023"
@@ -1117,7 +1115,7 @@
 
         <!-- Carte 3 : Wistia -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" async type="module"></script>
             <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
           </div>
@@ -1128,15 +1126,66 @@
         </div>
       </div>
 
+      <!-- Entreprises & Collectivités supplémentaires (placeholder, cachés) -->
+      <div class="projects-grid hidden" id="more-business">
+        <div class="project-card">
+          <div class="project-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/ddddddddddd?rel=0&modestbranding=1&playsinline=1"
+              title="Corporate placeholder 1"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="project-body">
+            <p class="project-title">Corporate placeholder 1</p>
+            <p class="project-type">Tournage &amp; montage</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/eeeeeeeeeee?rel=0&modestbranding=1&playsinline=1"
+              title="Corporate placeholder 2"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="project-body">
+            <p class="project-title">Corporate placeholder 2</p>
+            <p class="project-type">Interview &amp; montage</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/fffffffffff?rel=0&modestbranding=1&playsinline=1"
+              title="Corporate placeholder 3"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="project-body">
+            <p class="project-title">Corporate placeholder 3</p>
+            <p class="project-type">Film institutionnel</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-secondary see-more-btn" data-target="#more-business">
+        Voir plus ↓
+      </button>
+
       <!-- Clips musicaux -->
-      <h3 style="font-size:1.5rem; margin-top:3.2rem; margin-bottom:1rem;">Clips musicaux</h3>
-      <p style="color:var(--muted); margin-bottom:1.4rem; max-width:700px;">
+      <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Clips musicaux</h3>
+      <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
         Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
       </p>
       <div class="projects-grid">
-        <!-- Clip 1 -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/HFKDj80Pqrk?rel=0&modestbranding=1&playsinline=1"
               title='Clip – Casanova - "Nos Antipodes"'
@@ -1150,9 +1199,8 @@
           </div>
         </div>
 
-        <!-- Clip 2 -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/XsEYWD5c78k?rel=0&modestbranding=1&playsinline=1"
               title='Clip – Trois Vagues - "Hit Parade"'
@@ -1166,9 +1214,8 @@
           </div>
         </div>
 
-        <!-- Clip 3 -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/AkchxdyLWwI?rel=0&modestbranding=1&playsinline=1"
               title='III Vagues Session live Cover PNL - "à l&apos;ammoniaque"'
@@ -1183,11 +1230,10 @@
         </div>
       </div>
 
-      <!-- Clips musicaux supplémentaires (cachés au départ) -->
+      <!-- Clips supplémentaires -->
       <div class="projects-grid hidden" id="more-clips">
-        <!-- Placeholder 1 -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/aaaaaaaaaaa?rel=0&modestbranding=1&playsinline=1"
               title="Clip placeholder 1"
@@ -1201,9 +1247,8 @@
           </div>
         </div>
 
-        <!-- Placeholder 2 -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/bbbbbbbbbbb?rel=0&modestbranding=1&playsinline=1"
               title="Clip placeholder 2"
@@ -1217,9 +1262,8 @@
           </div>
         </div>
 
-        <!-- Placeholder 3 -->
         <div class="project-card">
-          <div class="project-thumb" style="padding:0; background:#000;">
+          <div class="project-thumb">
             <iframe
               src="https://www.youtube.com/embed/ccccccccccc?rel=0&modestbranding=1&playsinline=1"
               title="Clip placeholder 3"
@@ -1401,7 +1445,7 @@
   backToTopBtn.addEventListener('click', scrollToTop);
   backToTopTopBtn.addEventListener('click', scrollToTop);
 
-  // Bouton "Voir plus" Clips musicaux
+  // Boutons "Voir plus"
   document.querySelectorAll('.see-more-btn').forEach(button => {
     button.addEventListener('click', () => {
       const targetSelector = button.getAttribute('data-target');
