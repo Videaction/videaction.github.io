@@ -5,1459 +5,1484 @@
   <title>Clément Bouvéron – Vidéaste freelance (cadreur & monteur)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clément Bouvéron, vidéaste freelance spécialisé en cadrage et montage, basé à Valenciennes. Showreel, prestations, CV et contact.">
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎥</text></svg>'">
 
   <!-- Wistia player global -->
   <script src="https://fast.wistia.com/player.js" async></script>
 
+  <!-- Données structurées Person (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Clément Bouvéron",
+    "jobTitle": "Vidéaste freelance",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Valenciennes",
+      "addressRegion": "Hauts-de-France",
+      "addressCountry": "FR"
+    }
+  }
+  </script>
+
   <style>
-    :root {
-      --bg: #05060a;
-      --text: #f5f5f5;
-      --accent: #c0392b;
-      --muted: #a0a0a0;
-      --card: #111318;
-      --shadow: 0 18px 45px rgba(0,0,0,0.75);
-    }
+  :root {
+    --bg: #05060a;
+    --text: #f5f5f5;
+    --accent: #c0392b;
+    --muted: #a0a0a0;
+    --card: #111318;
+    --shadow: 0 18px 45px rgba(0,0,0,0.75);
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    html, body {
-      height: 100%;
-    }
+  html, body {
+    height: 100%;
+  }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
-      background: radial-gradient(circle at top, #171b2a 0, #05060a 55%, #000000 100%);
-      color: var(--text);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+    background: radial-gradient(circle at top, #171b2a 0, #05060a 55%, #000000 100%);
+    color: var(--text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-    a:hover {
-      opacity: 0.9;
-    }
+  a:hover {
+    opacity: 0.9;
+  }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
 
-    /* HEADER GLOBAL (logo + nav) */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(5,6,10,0.95), rgba(5,6,10,0.6));
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
+  /* HEADER GLOBAL (logo + nav) */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    background: linear-gradient(to bottom, rgba(5,6,10,0.95), rgba(5,6,10,0.6));
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
 
-    .site-header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  .site-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-    .logo-block {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+  .logo-block {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
 
-    .logo-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: inherit;
-    }
+  .logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+  }
 
-    .logo-img {
-      height: 32px;
-      width: auto;
-      display: block;
-    }
+  .logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
 
-    .logo-text {
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+  .logo-text {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
 
+  .main-nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .main-nav a {
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .main-nav a:hover {
+    color: var(--text);
+  }
+
+  @media (max-width: 768px) {
     .main-nav {
-      display: flex;
-      gap: 1.25rem;
-      font-size: 0.9rem;
+      display: none;
     }
-
-    .main-nav a {
-      color: var(--muted);
-      font-weight: 500;
+    .site-header-inner {
+      padding-inline: 1rem;
     }
+  }
 
-    .main-nav a:hover {
-      color: var(--text);
-    }
+  /* HERO */
+  header {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0 2rem;
+  }
 
-    @media (max-width: 768px) {
-      .main-nav {
-        display: none;
-      }
-      .site-header-inner {
-        padding-inline: 1rem;
-      }
-    }
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+    gap: 3rem;
+    align-items: center;
+  }
 
-    /* HERO */
-    header {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 0 2rem;
-    }
-
+  @media (max-width: 768px) {
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
-      gap: 3rem;
-      align-items: center;
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
     }
+  }
 
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-      }
-    }
+  .hero-logo-large {
+    margin-bottom: 1.8rem;
+  }
 
+  .hero-logo-img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 12px 35px rgba(0,0,0,0.8));
+  }
+
+  @media (max-width: 768px) {
     .hero-logo-large {
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-logo-img {
-      max-width: 360px;
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 12px 35px rgba(0,0,0,0.8));
-    }
-
-    @media (max-width: 768px) {
-      .hero-logo-large {
-        display: flex;
-        justify-content: center;
-      }
-    }
-
-    .hero-subtitle-role {
-      font-size: 1.08rem;
-      font-weight: 600;
-      color: var(--muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .hero-name-tag-row {
       display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 768px) {
-      .hero-name-tag-row {
-        justify-content: center;
-        text-align: center;
-      }
-    }
-
-    .hero-subtitle-name {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.35rem 0.8rem;
-      font-size: 0.85rem;
-      border-radius: 999px;
-      background: rgba(192,57,43,0.16);
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 600;
-    }
-
-    .role-tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.35rem 0.8rem;
-      font-size: 0.85rem;
-      border-radius: 999px;
-      background: rgba(192,57,43,0.16);
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 600;
-      margin-top: 0.35rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-top: 0.6rem;
-      margin-bottom: 1.75rem;
-      max-width: 520px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero-subtitle,
-      .hero-subtitle-role {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-buttons {
-        justify-content: center;
-      }
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
       justify-content: center;
-      padding: 0.85rem 1.7rem;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      white-space: nowrap;
     }
+  }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #ffffff;
-      box-shadow: var(--shadow);
-    }
+  .hero-subtitle-role {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 55px rgba(0,0,0,0.9);
-    }
+  .hero-name-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+  }
 
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid rgba(255,255,255,0.22);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.04);
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 4rem 0;
-    }
-
-    #showreel {
-      padding-top: 3.5rem;
-      padding-bottom: 4rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.5rem, 4vw, 2.3rem);
-      margin-bottom: 0.75rem;
+  @media (max-width: 768px) {
+    .hero-name-tag-row {
+      justify-content: center;
       text-align: center;
     }
+  }
 
-    .section-subtitle {
-      color: var(--muted);
-      margin-bottom: 3rem;
-      text-align: center;
-      font-size: 1.05rem;
-      max-width: 640px;
+  .hero-subtitle-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    background: rgba(192,57,43,0.16);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+
+  .role-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    background: rgba(192,57,43,0.16);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-top: 0.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    margin-bottom: 1.75rem;
+    max-width: 520px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-subtitle, .hero-subtitle-role {
       margin-left: auto;
       margin-right: auto;
     }
-
-    .card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255,255,255,0.06);
+    .hero-buttons {
+      justify-content: center;
     }
+  }
 
-    /* ABOUT */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.7rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: var(--shadow);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.9);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.22);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 4rem 0;
+  }
+
+  #showreel {
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 2.3rem);
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    color: var(--muted);
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 1.05rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media (min-width: 900px) {
     .about-grid {
-      display: grid;
-      gap: 3rem;
+      grid-template-columns: 1.7fr 1.3fr;
     }
+  }
 
-    @media (min-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1.7fr 1.3fr;
-      }
-    }
+  .about-photo-card {
+    padding: 0;
+    overflow: hidden;
+  }
 
-    .about-photo-card {
-      padding: 0;
-      overflow: hidden;
-    }
+  .about-photo-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 340px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
 
-    .about-photo-wrapper {
-      width: 100%;
-      height: 100%;
-      max-height: 340px;
-      overflow: hidden;
-      border-radius: 20px;
-    }
+  .about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
 
-    .about-photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
 
+  .profile-photo-wrapper {
+    width: 128px;
+    height: 128px;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0%;
+    display: block;
+  }
+
+  .profile-text-and-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    width: 100%;
+  }
+
+  .profile-cta-btn {
+    align-self: flex-end;
+  }
+
+  @media (max-width: 768px) {
     .profile-card {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .profile-photo-wrapper {
-      width: 128px;
-      height: 128px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 2px solid rgba(255,255,255,0.18);
-      display: flex;
       align-items: center;
-      justify-content: center;
-      background: #000;
-    }
-
-    .profile-photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 0%;
-      display: block;
-    }
-
-    .profile-text-and-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-      width: 100%;
-    }
-
-    .profile-cta-btn {
-      align-self: flex-end;
-    }
-
-    @media (max-width: 768px) {
-      .profile-card {
-        align-items: center;
-        text-align: center;
-      }
-      .profile-text-and-cta {
-        align-items: center;
-        text-align: center;
-      }
-      .profile-cta-btn {
-        align-self: center;
-      }
-    }
-
-    /* SHOWREEL / VIDEOS */
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      margin-bottom: 3rem;
-      background: #000;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.6rem;
-      margin-top: 1.6rem;
-    }
-
-    .project-card {
-      background: var(--card);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
-      border: 1px solid rgba(255,255,255,0.05);
-      padding: 0.5rem 0.5rem 0.7rem;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.9);
-      border-color: rgba(192,57,43,0.45);
-    }
-
-    .project-thumb {
-      background: radial-gradient(circle at top, #444 0, #000 70%);
-      aspect-ratio: 16 / 9;
-      position: relative;
-    }
-
-    .project-thumb iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    .project-body {
-      padding: 0.45rem 0.6rem 0.5rem;
-    }
-
-    .project-title {
-      font-weight: 700;
-      margin-bottom: 0.12rem;
-      font-size: 0.98rem;
-    }
-
-    .project-type {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* Variantes pour la section Bandes-annonces (encore plus compactes) */
-    .projects-grid.ba-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.75rem;
-      margin-top: 0.25rem;
-    }
-
-    .project-card.ba-card {
-      border-radius: 12px;
-      padding: 0.25rem 0.25rem 0.4rem;
-    }
-
-    .project-card.ba-card .project-thumb {
-      aspect-ratio: 16 / 9;
-      background: #000;
-    }
-
-    .project-card.ba-card .project-body {
-      padding: 0.3rem 0.4rem 0.35rem;
-    }
-
-    .project-card.ba-card .project-title {
-      font-size: 0.86rem;
-      margin-bottom: 0.08rem;
-    }
-
-    .project-card.ba-card .project-type {
-      font-size: 0.76rem;
-    }
-
-    .ba-subtitle {
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-      max-width: 700px;
-    }
-
-    .ba-subheading {
-      font-size: 1.05rem;
-      margin-top: 0.6rem;
-      margin-bottom: 0.2rem;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-title {
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      font-size: 1.15rem;
-    }
-
-    .service-desc {
-      color: var(--muted);
-      margin-bottom: 1rem;
-      line-height: 1.5;
-      font-size: 0.98rem;
-    }
-
-    .service-meta {
-      font-size: 0.9rem;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    /* CV */
-    .cv-grid {
-      display: grid;
-      gap: 3rem;
-    }
-
-    @media (min-width: 800px) {
-      .cv-grid {
-        grid-template-columns: 2fr 1fr;
-      }
-    }
-
-    .cv-list {
-      list-style: none;
-    }
-
-    .cv-item {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .cv-item:last-child {
-      border-bottom: none;
-    }
-
-    .cv-year {
-      font-size: 0.9rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .cv-role {
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .cv-place {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      gap: 3rem;
-    }
-
-    @media (min-width: 800px) {
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    form {
-      display: grid;
-      gap: 1.25rem;
-    }
-
-    label {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      display: block;
-      font-size: 0.9rem;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 0.9rem 1.1rem;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.18);
-      font: inherit;
-      font-size: 0.98rem;
-      background: rgba(5,6,10,0.9);
-      color: var(--text);
-      transition: border-color 0.2s ease, background-color 0.2s ease;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      outline: none;
-      border-color: var(--accent);
-      background: rgba(10,12,18,1);
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 3rem 0 2rem;
       text-align: center;
-      color: var(--muted);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      background: rgba(0,0,0,0.7);
     }
-
-    /* BOUTONS RETOUR EN HAUT */
-    .back-to-top,
-    .back-to-top-top {
-      position: fixed;
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      border: none;
-      background: rgba(0,0,0,0.75);
-      color: #fff;
-      display: flex;
+    .profile-text-and-cta {
       align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.9);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-      z-index: 60;
+      text-align: center;
     }
+    .profile-cta-btn {
+      align-self: center;
+    }
+  }
 
+  /* SHOWREEL / VIDEOS */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+    background: #000;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.6rem;
+    margin-top: 1.6rem;
+  }
+
+  .project-card {
+    background: var(--card);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 0.5rem 0.5rem 0.7rem;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.9);
+    border-color: rgba(192,57,43,0.45);
+  }
+
+  .project-thumb {
+    background: radial-gradient(circle at top, #444 0, #000 70%);
+    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+
+  .project-thumb iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  .project-body {
+    padding: 0.45rem 0.6rem 0.5rem;
+  }
+
+  .project-title {
+    font-weight: 700;
+    margin-bottom: 0.12rem;
+    font-size: 0.98rem;
+  }
+
+  .project-type {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* Variantes pour la section Bandes-annonces (encore plus compactes) */
+  .projects-grid.ba-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .project-card.ba-card {
+    border-radius: 12px;
+    padding: 0.25rem 0.25rem 0.4rem;
+  }
+
+  .project-card.ba-card .project-thumb {
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+
+  .project-card.ba-card .project-body {
+    padding: 0.3rem 0.4rem 0.35rem;
+  }
+
+  .project-card.ba-card .project-title {
+    font-size: 0.86rem;
+    margin-bottom: 0.08rem;
+  }
+
+  .project-card.ba-card .project-type {
+    font-size: 0.76rem;
+  }
+
+  .ba-subtitle {
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    max-width: 700px;
+  }
+
+  .ba-subheading {
+    font-size: 1.05rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+  }
+
+  .service-desc {
+    color: var(--muted);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.98rem;
+  }
+
+  .service-meta {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* CV */
+  .cv-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media (min-width: 800px) {
+    .cv-grid {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .cv-list {
+    list-style: none;
+  }
+
+  .cv-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .cv-item:last-child {
+    border-bottom: none;
+  }
+
+  .cv-year {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .cv-role {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .cv-place {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media (min-width: 800px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  form {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    font: inherit;
+    font-size: 0.98rem;
+    background: rgba(5,6,10,0.9);
+    color: var(--text);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(10,12,18,1);
+  }
+
+  textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: rgba(0,0,0,0.7);
+  }
+
+  /* BOUTONS RETOUR EN HAUT */
+  .back-to-top,
+  .back-to-top-top {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    z-index: 60;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .back-to-top-top {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-2px);
+    background: rgba(0,0,0,0.9);
+  }
+
+  .back-to-top-top:hover {
+    transform: translateX(-50%) translateY(-2px);
+    background: rgba(0,0,0,0.9);
+  }
+
+  .back-to-top.show,
+  .back-to-top-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top span,
+  .back-to-top-top span {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .back-to-top-tooltip,
+  .back-to-top-top-tooltip {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .back-to-top-tooltip {
+    bottom: 52px;
+  }
+
+  .back-to-top-top-tooltip {
+    top: 52px;
+  }
+
+  .back-to-top:hover .back-to-top-tooltip,
+  .back-to-top-top:hover .back-to-top-top-tooltip {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+    section {
+      padding: 3.5rem 0;
+    }
+    .projects-grid,
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
     .back-to-top {
-      bottom: 20px;
-      right: 20px;
+      bottom: 16px;
+      right: 16px;
     }
-
     .back-to-top-top {
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 56px;
     }
+  }
 
-    .back-to-top:hover {
-      transform: translateY(-2px);
-      background: rgba(0,0,0,0.9);
-    }
+  /* Placeholders Wistia */
+  wistia-player[media-id='cf88q5fgww']:not(:defined),
+  wistia-player[media-id='z2lm1s83tp']:not(:defined),
+  wistia-player[media-id='94u3wxyxyd']:not(:defined) {
+    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cf88q5fgww/swatch');
+    display: block;
+    filter: blur(5px);
+    padding-top: 56.25%;
+  }
 
-    .back-to-top-top:hover {
-      transform: translateX(-50%) translateY(-2px);
-      background: rgba(0,0,0,0.9);
-    }
+  /* Show more / less */
+  .hidden {
+    display: none;
+  }
 
-    .back-to-top.show,
-    .back-to-top-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .back-to-top span,
-    .back-to-top-top span {
-      font-size: 1.3rem;
-      line-height: 1;
-    }
-
-    .back-to-top-tooltip,
-    .back-to-top-top-tooltip {
-      position: absolute;
-      right: 50%;
-      transform: translateX(50%);
-      background: rgba(0,0,0,0.9);
-      color: #fff;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-    }
-
-    .back-to-top-tooltip {
-      bottom: 52px;
-    }
-
-    .back-to-top-top-tooltip {
-      top: 52px;
-    }
-
-    .back-to-top:hover .back-to-top-tooltip,
-    .back-to-top-top:hover .back-to-top-top-tooltip {
-      opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 1rem;
-      }
-      section {
-        padding: 3.5rem 0;
-      }
-      .projects-grid,
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .back-to-top {
-        bottom: 16px;
-        right: 16px;
-      }
-      .back-to-top-top {
-        top: 56px;
-      }
-    }
-
-    /* Placeholders Wistia */
-    wistia-player[media-id='cf88q5fgww']:not(:defined),
-    wistia-player[media-id='z2lm1s83tp']:not(:defined),
-    wistia-player[media-id='94u3wxyxyd']:not(:defined) {
-      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cf88q5fgww/swatch');
-      display: block;
-      filter: blur(5px);
-      padding-top: 56.25%;
-    }
-
-    /* Show more / less */
-    .hidden {
-      display: none;
-    }
-
-    .see-more-btn {
-      margin-top: 1.4rem;
-      padding: 0.55rem 1.1rem;
-      font-size: 0.8rem;
-      border-radius: 999px;
-    }
+  .see-more-btn {
+    margin-top: 1.4rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.8rem;
+    border-radius: 999px;
+  }
   </style>
 </head>
 <body id="top">
-
-<!-- HEADER -->
-<div class="site-header">
-  <div class="site-header-inner">
-    <div class="logo-block">
-      <a href="#top" class="logo-link">
-        <img src="logo-videaction.png" alt="VIDEACTION – logo" class="logo-img">
-        <span class="logo-text">VIDEACTION</span>
-      </a>
+  <!-- HEADER -->
+  <div class="site-header">
+    <div class="site-header-inner">
+      <div class="logo-block">
+        <a href="#top" class="logo-link">
+          <!-- ALT plus descriptif -->
+          <img src="logo-videaction.png" alt="Logo VIDEACTION - Clément Bouvéron vidéaste" class="logo-img">
+          <span class="logo-text">VIDEACTION</span>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="#about">À propos</a>
+        <a href="#services">Prestations</a>
+        <a href="#showreel">Showreel</a>
+        <a href="#cv">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav class="main-nav">
-      <a href="#about">À propos</a>
-      <a href="#services">Prestations</a>
-      <a href="#showreel">Showreel</a>
-      <a href="#cv">Parcours</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </div>
-</div>
 
-<header>
-  <div class="container">
-    <div class="hero">
-      <div>
-        <div class="hero-logo-large">
-          <a href="#top">
-            <img src="logo-videaction.png" alt="VIDEACTION – logo" class="hero-logo-img">
-          </a>
+  <header>
+    <div class="container">
+      <div class="hero">
+        <div>
+          <div class="hero-logo-large">
+            <a href="#top">
+              <!-- ALT plus descriptif -->
+              <img src="logo-videaction.png" alt="Logo VIDEACTION - Clément Bouvéron vidéaste" class="hero-logo-img">
+            </a>
+          </div>
+          <div class="hero-name-tag-row">
+            <p class="hero-subtitle-name">Clément Bouvéron – Vidéaste freelance</p>
+          </div>
+          <p class="role-tag">Cadrage, Montage &amp; Post-Production</p>
+          <p class="hero-subtitle">
+            Je crée des vidéos claires, rythmées et adaptées à vos besoins : clips, interviews,
+            contenus réseaux sociaux, aftermovies et films pour entreprises & collectivités.
+          </p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-secondary">Mes prestations</a>
+            <a href="#showreel" class="btn btn-primary">Voir un aperçu de mon travail</a>
+          </div>
         </div>
-        <div class="hero-name-tag-row">
-          <p class="hero-subtitle-name">Clément Bouvéron – Vidéaste freelance</p>
-        </div>
-        <p class="role-tag">Cadrage, Montage &amp; Post-Production</p>
-        <p class="hero-subtitle">
-          Je crée des vidéos claires, rythmées et adaptées à vos besoins :
-          clips, interviews, contenus réseaux sociaux, aftermovies et films pour entreprises & collectivités.
-        </p>
-        <div class="hero-buttons">
-          <a href="#services" class="btn btn-secondary">Mes prestations</a>
-          <a href="#showreel" class="btn btn-primary">Voir un aperçu de mon travail</a>
+
+        <div class="card profile-card">
+          <div class="profile-photo-wrapper">
+            <img src="photo-clement.png" alt="Portrait de Clément Bouvéron, vidéaste" class="profile-photo">
+          </div>
+          <div class="profile-text-and-cta">
+            <div>
+              <h2 style="margin-bottom:0.6rem; font-size:1.2rem;">Disponible pour tous vos futurs projets !</h2>
+              <p style="color:var(--muted); font-size:0.98rem;">
+                Basé à Valenciennes (Hauts-de-France), je me déplace en région pour des
+                <strong>captations</strong> autour de Valenciennes et en région Lilloise. <br>Je travaille également à distance,
+                pour tous vos projets de <strong>montage</strong>, avec des vidéos efficaces et élégantes.
+              </p>
+            </div>
+            <a href="#contact" class="btn btn-primary profile-cta-btn">Me contacter</a>
+          </div>
         </div>
       </div>
-      <div class="card profile-card">
-        <div class="profile-photo-wrapper">
-          <img src="photo-clement.png" alt="Clément Bouvéron" class="profile-photo">
-        </div>
-        <div class="profile-text-and-cta">
+    </div>
+  </header>
+
+  <main>
+    <!-- À propos -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">À propos</h2>
+        <p class="section-subtitle">
+          Quelques mots sur mon parcours et ma manière de travailler.
+        </p>
+        <div class="about-grid">
           <div>
-            <h2 style="margin-bottom:0.6rem; font-size:1.2rem;">Disponible pour tous vos futurs projets !</h2>
-            <p style="color:var(--muted); font-size:0.98rem;">
-              Basé à Valenciennes (Hauts-de-France), je me déplace en région pour des <strong>captations</strong> autour de Valenciennes et en région Lilloise.
-              <br>Je travaille également à distance, pour tous vos projets de <strong>montage</strong>, avec des vidéos efficaces et élégantes.
+            <p>Bonjour ! Bienvenue sur le site de <strong>Vidéaction</strong>.</p>
+            <p>
+              Vidéaction, c'est moi, <strong>Clément</strong>, vidéaste autoentrepreneur spécialisé en cadrage et montage depuis
+              une vingtaine d'années. J’ai travaillé 15 ans chez <strong>Ankama</strong> (Dofus, Wakfu,...),
+              acteur majeur du divertissement français sur de multiples projets (jeux-vidéo, films et séries animées...) et
+              ai lancé en parallèle mon autoentreprise en 2017, pour des missions annexes.
+            </p>
+            <p>
+              Recherchant toujours plus de variété dans mes projets, j'ai pu me diversifier avec la réalisation et montage
+              de clips musicaux, trailers de jeux et de films, la captation de multiples évènements corporate, mais également
+              développer une activité plus engagée, avec plusieurs interventions en milieu scolaire, pour initier les jeunes à
+              l’image (pédagogie autour de la création, vigilance face à la manipulation audio-visuelle...) et aux techniques
+              d’animation (films stop motion, pixilation...).
+            </p>
+            <p style="margin-top:1.5rem;">
+              J’aime les images soignées, les montages rythmés et les histoires simples qui parlent directement au public.
+              <strong>Mon objectif</strong> : produire des vidéos professionnelles, adaptables à votre audience et à vos supports
+              (web, réseaux sociaux, événementiel).
+            </p>
+
+            <div class="card" style="margin-top:1.75rem;">
+              <p style="font-weight:700; margin-bottom:0.75rem; font-size:1.05rem;">Infos rapides</p>
+              <p><strong>📍Basé à :</strong> Valenciennes et alentours (Hauts-de-France)</p>
+              <p><strong>🎯 Spécialités :</strong> tournage, montage, contenus réseaux sociaux, clips, mappings vidéo</p>
+              <p><strong>👥 Clients :</strong> entreprises, collectivités, artistes, agences, écoles</p>
+              <p><strong>🛠️ Matériel :</strong> Caméra 4K &amp; Optiques, enregistrement audio, Lumière, Drone</p>
+            </div>
+          </div>
+
+          <div class="card about-photo-card">
+            <div class="about-photo-wrapper">
+              <img src="photo-tournage.jpg" alt="Clément Bouvéron en tournage vidéo" class="about-photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prestations -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Prestations</h2>
+        <p class="section-subtitle">
+          Des services adaptés aux besoins des entreprises, collectivités, artistes et structures culturelles.
+        </p>
+
+        <div class="services-grid">
+          <div class="card">
+            <p class="service-title">🎥 Captation (cadreur)</p>
+            <p class="service-desc">
+              Tournage sur le terrain avec matériel professionnel (caméra 4K, optiques, micros HF, éclairage LED).
+              Idéal pour interviews, conférences, événements, reportages pour entreprises &amp; collectivités.
+            </p>
+            <p class="service-meta">Captation Multicam possible, selon projet.</p>
+          </div>
+
+          <div class="card">
+            <p class="service-title">✂️ Montage vidéo</p>
+            <p class="service-desc">
+              Montage rythmé, respect de votre identité visuelle, intégration de titres, sous-titres, musique libre de droits
+              et exports optimisés pour YouTube, Instagram, LinkedIn, etc.
+            </p>
+            <p class="service-meta">Formats horizontaux, verticaux ou carrés.</p>
+          </div>
+
+          <div class="card">
+            <p class="service-title">🎬 Pack complet</p>
+            <p class="service-desc">
+              Accompagnement de A à Z : conseil créatif, réalisation, tournage, montage, étalonnage, déclinaisons pour vos
+              différents supports. Idéal pour un film de marque, une campagne vidéo ou un projet institutionnel.
+            </p>
+            <p class="service-meta">Devis sur mesure selon votre projet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showreel + Projets -->
+    <section id="showreel">
+      <div class="container">
+        <h2 class="section-title">Showreel</h2>
+        <p class="section-subtitle">
+          Un aperçu de mon travail dans différents univers : entreprises &amp; collectivités, clips musicaux et bandes-annonces.
+        </p>
+
+        <!-- Showreel Wistia -->
+        <div class="video-wrapper" style="margin-bottom: 3.5rem;">
+          <script src="https://fast.wistia.com/embed/cf88q5fgww.js" defer type="module"></script>
+          <wistia-player media-id="cf88q5fgww" aspect="1.7777777777777777"></wistia-player>
+        </div>
+
+        <!-- Bandes-annonces -->
+        <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">Bandes-annonces</h3>
+        <p class="ba-subtitle">Bandes-annonces de films, séries, et jeux vidéo.</p>
+
+        <!-- Films -->
+        <h4 class="ba-subheading">Films</h4>
+        <div class="projects-grid ba-grid">
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/8IN7a0GNNJw?rel=0&modestbranding=1&playsinline=1"
+                      title="Bande-annonce – DOFUS Le Film"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Bande-annonce – DOFUS Le Film</p>
+              <p class="project-type">Montage cinéma</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/_SoUNNF11pw?rel=0&modestbranding=1&playsinline=1"
+                      title="Princesse Dragon – OST"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Princesse Dragon – Bande originale</p>
+              <p class="project-type">Montage bande-son / extrait film</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/TXgVY7IVljM?rel=0&modestbranding=1&playsinline=1"
+                      title="Mutafukaz – Bande-annonce"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Mutafukaz – Bande-annonce</p>
+              <p class="project-type">Montage cinéma</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jeux vidéo -->
+        <h4 class="ba-subheading" style="margin-top:0.9rem;">Jeux vidéo</h4>
+        <div class="projects-grid ba-grid">
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/Ic3_MAQ77u0?rel=0&modestbranding=1&playsinline=1"
+                      title="Trailer One More Gate"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Trailer – One More Gate</p>
+              <p class="project-type">Communication internationale JV</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/b-lrH2-JKj8?rel=0&modestbranding=1&playsinline=1"
+                      title="Trailer – DOFUS Temporis Retro"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">DOFUS – Temporis Retro</p>
+              <p class="project-type">Trailer événementiel JV</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/qa3eG3KYRJ4?rel=0&modestbranding=1&playsinline=1"
+                      title="SUPER NANO BLASTER – Trailer"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">SUPER NANO BLASTER – Trailer</p>
+              <p class="project-type">Trailer jeu indépendant</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Séries -->
+        <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
+        <div class="projects-grid ba-grid">
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/fJRGLJv2PnI?rel=0&modestbranding=1&playsinline=1"
+                      title="Baidir – Trailer série"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Baidir – Série animée</p>
+              <p class="project-type">Trailer série</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/EvfrNKvEgqY?rel=0&modestbranding=1&playsinline=1"
+                      title="Kerubim – Série"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Kerubim – Série</p>
+              <p class="project-type">Teaser / trailer série</p>
+            </div>
+          </div>
+
+          <div class="project-card ba-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
+                      title="Teasing Kickstarter WAKFU"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Teasing Kickstarter WAKFU</p>
+              <p class="project-type">Concept promo série</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entreprises & Collectivités -->
+        <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
+        <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
+          Films pour entreprises, collectivités, associations et organismes : interviews, conférences, événements,
+          films de présentation ou communication officielle.
+        </p>
+
+        <div class="projects-grid">
+          <!-- Carte 1 : Wistia -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" defer type="module"></script>
+              <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Film de présentation – école ESMOD</p>
+              <p class="project-type">Corporate / tournage &amp; montage</p>
+            </div>
+          </div>
+
+          <!-- Carte 2 : YouTube -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
+                      title="Evènement - GameCamp 2023"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Évènement – GameCamp 2023</p>
+              <p class="project-type">Captation</p>
+            </div>
+          </div>
+
+          <!-- Carte 3 : Wistia -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" defer type="module"></script>
+              <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Reportage – UX Camp 2024</p>
+              <p class="project-type">Captation événement professionnel &amp; montage recap</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entreprises & Collectivités supplémentaires (placeholders gardés) -->
+        <div class="projects-grid hidden" id="more-business">
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/ddddddddddd?rel=0&modestbranding=1&playsinline=1"
+                      title="Corporate placeholder 1"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Corporate placeholder 1</p>
+              <p class="project-type">Tournage &amp; montage</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/eeeeeeeeeee?rel=0&modestbranding=1&playsinline=1"
+                      title="Corporate placeholder 2"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Corporate placeholder 2</p>
+              <p class="project-type">Interview &amp; montage</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/fffffffffff?rel=0&modestbranding=1&playsinline=1"
+                      title="Corporate placeholder 3"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Corporate placeholder 3</p>
+              <p class="project-type">Film institutionnel</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary see-more-btn" data-target="#more-business">
+          Voir plus ↓
+        </button>
+
+        <!-- Clips musicaux -->
+        <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Clips musicaux</h3>
+        <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
+          Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/HFKDj80Pqrk?rel=0&modestbranding=1&playsinline=1"
+                      title='Clip – Casanova - "Nos Antipodes"'
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Clip – Casanova – "Nos Antipodes" (The Voice)</p>
+              <p class="project-type">Réalisation, cadrage &amp; montage</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/XsEYWD5c78k?rel=0&modestbranding=1&playsinline=1"
+                      title='Clip – Trois Vagues - "Hit Parade"'
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Clip – Trois Vagues – "Hit Parade"</p>
+              <p class="project-type">Tournage, montage &amp; post‑production</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/watch?v=EfQ5G9iijZ4"
+                      title='Trill-Dan - "Hangyaku Zenya"'
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">
+                Trill-Dan - "Hangyaku Zenya"
+              </p>
+              <p class="project-type">Captation multi‑caméras &amp; montage</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clips supplémentaires (placeholders gardés) -->
+        <div class="projects-grid hidden" id="more-clips">
+          <div class="project-thumb">
+              <iframe src="https://www.youtube.com/embed/AkchxdyLWwI?rel=0&modestbranding=1&playsinline=1"
+                      title='III Vagues Session live Cover PNL - "à l&apos;ammoniaque"'
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Session live – Cover PNL "À l'ammoniaque" – III Vagues</p>
+              <p class="project-type">Captation multi‑caméras &amp; montage</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/watch?v=NJ3a7S3bdgc"
+                      title="Le Bonheur - Gauthier Galand & Justine Raux"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">Le Bonheur - Gauthier Galand & Justine Raux</p>
+              <p class="project-type">Réalisation, tournage &amp; montage</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">
+              <iframe src="https://www.youtube.com/watch?v=QwO56nGwaYo"
+                      title="TROIS VAGUES - Des gens heureux"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <p class="project-title">TROIS VAGUES - Des gens heureux</p>
+              <p class="project-type">Réalisation, tournage &amp; montage</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary see-more-btn" data-target="#more-clips">
+          Voir plus ↓
+        </button>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <div class="container">
+        <h2 class="section-title">Parcours professionnel</h2>
+        <p class="section-subtitle">Expérience, formations et compétences techniques.</p>
+
+        <div class="cv-grid">
+          <div>
+            <ul class="cv-list">
+              <li class="cv-item">
+                <p class="cv-year">2017–Présent</p>
+                <p class="cv-role">Vidéaste freelance – Auto-entreprise “Vidéaction”</p>
+                <p class="cv-place">
+                  Clips musicaux, trailers jeux vidéo, captation d'évènements, mappings vidéo,
+                  interventions en écoles (stop motion, pixilation).
+                </p>
+              </li>
+
+              <li class="cv-item">
+                <p class="cv-year">2014–2024</p>
+                <p class="cv-role">Cadreur-Monteur / Technicien Vidéo</p>
+                <p class="cv-place">
+                  Ankama Studio – Marketing &amp; Communication : vidéos corporate, R&amp;D encodage et diffusion web.
+                </p>
+              </li>
+
+              <li class="cv-item">
+                <p class="cv-year">2009–2014</p>
+                <p class="cv-role">Monteur - Chef Monteur</p>
+                <p class="cv-place">
+                  Ankama Productions : web-TV, reportages, bande-annonces, webséries, clips musicaux.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Profil / études</p>
+            <p style="color:var(--muted); margin-bottom:1.5rem;">
+              BTS Montage &amp; Post-Production et Master Cinéma.<br><br>
+              Plus de 15 ans d’expérience entre studio de création (Ankama) et projets freelance.
+            </p>
+
+            <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Compétences clés</p>
+            <p style="color:var(--muted); margin-bottom:1.5rem;">
+              <strong>Techniques :</strong> cadrage, montage, étalonnage, motion léger<br>
+              <strong>Logiciels :</strong> Premiere Pro, After Effects, DaVinci Resolve<br>
+            </p>
+
+            <a href="CV.pdf" class="btn btn-primary" download>📄 Télécharger CV (PDF)</a>
+
+            <p style="margin-top:0.75rem;">
+              <a href="https://www.linkedin.com/in/cbouveron" target="_blank" rel="noopener">Mon LinkedIn</a>
             </p>
           </div>
-          <a href="#contact" class="btn btn-primary profile-cta-btn">Me contacter</a>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </section>
 
-<main>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Me contacter</h2>
+        <p class="section-subtitle">
+          Parlez-moi de votre projet, je vous réponds sous 24 à 48h.
+        </p>
 
-  <!-- À propos -->
-  <section id="about">
+        <div class="contact-grid">
+          <div>
+            <form action="https://api.staticforms.xyz/submit" method="POST">
+              <input type="hidden" name="accessKey" value="sf_093e250kki9lfg7d4cinh3lk">
+              <input type="hidden" name="email" value="videaction@proton.me">
+              <input type="hidden" name="replyTo" value="@">
+              <input type="hidden" name="redirectTo" value="https://videaction.github.io/merci.html">
+              <input type="text" name="honeypot" style="display:none">
+
+              <div>
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div>
+                <label for="project">Type de projet</label>
+                <select id="project" name="project">
+                  <option>Clip musical</option>
+                  <option>Film corporate / institutionnel</option>
+                  <option>Événement / aftermovie</option>
+                  <option>Contenus réseaux sociaux</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message"
+                          placeholder="Dites-moi quelques mots sur votre projet, vos objectifs, vos délais…"
+                          required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Coordonnées</p>
+            <p><strong>📧 E-mail :</strong> <a href="mailto:videaction@proton.me">videaction[at]proton.me</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-      <h2 class="section-title">À propos</h2>
-      <p class="section-subtitle">
-        Quelques mots sur mon parcours et ma manière de travailler.
+      <p>© <span id="year"></span> Clément Bouvéron – VIDEACTION.</p>
+      <p style="margin-top:0.5rem; font-size:0.9rem;">
+        Vidéaste freelance – cadrage &amp; montage sur Valenciennes et environs.
       </p>
-      <div class="about-grid">
-        <div>
-          <p>Bonjour ! Bienvenue sur le site de <strong>Vidéaction</strong>.</p>
-          <p>
-            Vidéaction, c'est moi, <strong>Clément</strong>, vidéaste autoentrepreneur spécialisé en cadrage et montage depuis une vingtaine d'années.
-            J’ai travaillé 15 ans chez <strong>Ankama</strong> (Dofus, Wakfu,...), acteur majeur du divertissement français sur de multiples projets (jeux-vidéo, films et séries animées...) et ai lancé en parallèle mon autoentreprise en 2017, pour des missions annexes.
-          </p>
-          <p>
-            Recherchant toujours plus de variété dans mes projets, j'ai pu me diversifier avec la réalisation et montage de clips musicaux, trailers de jeux et de films, la captation de multiples évènements corporate, mais également développer une activité plus engagée, avec plusieurs interventions
-            en milieu scolaire, pour initier les jeunes à l’image (pédagogie autour de la création, vigilance face à la manipulation audio-visuelle...) et aux techniques d’animation (films stop motion, pixilation...).
-          </p>
-          <p style="margin-top:1.5rem;">
-            J’aime les images soignées, les montages rythmés et les histoires simples qui parlent
-            directement au public. <strong>Mon objectif</strong> : produire des vidéos professionnelles,
-            adaptables à votre audience et à vos supports (web, réseaux sociaux, événementiel).
-          </p>
-          <div class="card" style="margin-top:1.75rem;">
-            <p style="font-weight:700; margin-bottom:0.75rem; font-size:1.05rem;">Infos rapides</p>
-            <p><strong>📍Basé à :</strong> Valenciennes et alentours (Hauts-de-France)</p>
-            <p><strong>🎯 Spécialités :</strong> tournage, montage, contenus réseaux sociaux, clips, mappings vidéo</p>
-            <p><strong>👥 Clients :</strong> entreprises, collectivités, artistes, agences, écoles</p>
-            <p><strong>🛠️ Matériel :</strong> Caméra 4K &amp; Optiques, enregistrement audio, Lumière, Drone</p>
-          </div>
-        </div>
-        <div class="card about-photo-card">
-          <div class="about-photo-wrapper">
-            <img src="photo-tournage.jpg" alt="Clément tournage" class="about-photo">
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- Prestations -->
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Prestations</h2>
-      <p class="section-subtitle">
-        Des services adaptés aux besoins des entreprises, collectivités, artistes et structures culturelles.
-      </p>
-      <div class="services-grid">
-        <div class="card">
-          <p class="service-title">🎥 Captation (cadreur)</p>
-          <p class="service-desc">
-            Tournage sur le terrain avec matériel professionnel (caméra 4K, optiques,
-            micros HF, éclairage LED). Idéal pour interviews, conférences, événements,
-            reportages pour entreprises &amp; collectivités.
-          </p>
-          <p class="service-meta">Captation Multicam possible, selon projet.</p>
-        </div>
-        <div class="card">
-          <p class="service-title">✂️ Montage vidéo</p>
-          <p class="service-desc">
-            Montage rythmé, respect de votre identité visuelle, intégration de titres,
-            sous-titres, musique libre de droits et exports optimisés pour YouTube,
-            Instagram, LinkedIn, etc.
-          </p>
-          <p class="service-meta">Formats horizontaux, verticaux ou carrés.</p>
-        </div>
-        <div class="card">
-          <p class="service-title">🎬 Pack complet</p>
-          <p class="service-desc">
-            Accompagnement de A à Z : conseil créatif, réalisation, tournage, montage, étalonnage,
-            déclinaisons pour vos différents supports. Idéal pour un film de marque,
-            une campagne vidéo ou un projet institutionnel.
-          </p>
-          <p class="service-meta">Devis sur mesure selon votre projet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Boutons retour en haut, mieux labellisés -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Retour en haut de page">
+    <span aria-hidden="true">↑</span>
+    <div class="back-to-top-tooltip">En haut</div>
+  </button>
 
-  <!-- Showreel + Projets -->
-  <section id="showreel">
-    <div class="container">
-      <h2 class="section-title">Showreel</h2>
-      <p class="section-subtitle">
-        Un aperçu de mon travail dans différents univers : entreprises &amp; collectivités, clips musicaux et bandes-annonces.
-      </p>
+  <button class="back-to-top-top" id="backToTopTopBtn" aria-label="Retour en haut de page">
+    <span aria-hidden="true">↑</span>
+    <div class="back-to-top-top-tooltip">En haut</div>
+  </button>
 
-      <!-- Showreel Wistia -->
-      <div class="video-wrapper" style="margin-bottom: 3.5rem;">
-        <script src="https://fast.wistia.com/embed/cf88q5fgww.js" async type="module"></script>
-        <wistia-player media-id="cf88q5fgww" aspect="1.7777777777777777"></wistia-player>
-      </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      <!-- Bandes-annonces -->
-      <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">Bandes-annonces</h3>
-      <p class="ba-subtitle">
-        Bandes-annonces de films, séries, et jeux vidéo.
-      </p>
-
-      <!-- Films -->
-      <h4 class="ba-subheading">Films</h4>
-      <div class="projects-grid ba-grid">
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/8IN7a0GNNJw?rel=0&modestbranding=1&playsinline=1"
-              title="Bande-annonce – DOFUS Le Film"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Bande-annonce – DOFUS Le Film</p>
-            <p class="project-type">Montage cinéma</p>
-          </div>
-        </div>
-
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/_SoUNNF11pw?rel=0&modestbranding=1&playsinline=1"
-              title="Princesse Dragon – OST"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Princesse Dragon – Bande originale</p>
-            <p class="project-type">Montage bande-son / extrait film</p>
-          </div>
-        </div>
-
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/TXgVY7IVljM?rel=0&modestbranding=1&playsinline=1"
-              title="Mutafukaz – Bande-annonce"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Mutafukaz – Bande-annonce</p>
-            <p class="project-type">Montage cinéma</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jeux vidéo -->
-      <h4 class="ba-subheading" style="margin-top:0.9rem;">Jeux vidéo</h4>
-      <div class="projects-grid ba-grid">
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/Ic3_MAQ77u0?rel=0&modestbranding=1&playsinline=1"
-              title="Trailer One More Gate"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Trailer – One More Gate</p>
-            <p class="project-type">Communication internationale JV</p>
-          </div>
-        </div>
-
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/b-lrH2-JKj8?rel=0&modestbranding=1&playsinline=1"
-              title="Trailer – DOFUS Temporis Retro"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">DOFUS – Temporis Retro</p>
-            <p class="project-type">Trailer événementiel JV</p>
-          </div>
-        </div>
-
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/qa3eG3KYRJ4?rel=0&modestbranding=1&playsinline=1"
-              title="SUPER NANO BLASTER – Trailer"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">SUPER NANO BLASTER – Trailer</p>
-            <p class="project-type">Trailer jeu indépendant</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Séries -->
-      <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
-      <div class="projects-grid ba-grid">
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/fJRGLJv2PnI?rel=0&modestbranding=1&playsinline=1"
-              title="Baidir – Trailer série"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Baidir – Série animée</p>
-            <p class="project-type">Trailer série</p>
-          </div>
-        </div>
-
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/EvfrNKvEgqY?rel=0&modestbranding=1&playsinline=1"
-              title="Kerubim – Série"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Kerubim – Série</p>
-            <p class="project-type">Teaser / trailer série</p>
-          </div>
-        </div>
-
-        <div class="project-card ba-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
-              title="Teasing Kickstarter WAKFU"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Teasing Kickstarter WAKFU</p>
-            <p class="project-type">Concept promo série</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Entreprises & Collectivités -->
-      <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
-      <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
-        Films pour entreprises, collectivités, associations et organismes : interviews, conférences,
-        événements, films de présentation ou communication officielle.
-      </p>
-
-      <div class="projects-grid">
-        <!-- Carte 1 : Wistia -->
-        <div class="project-card">
-          <div class="project-thumb">
-            <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" async type="module"></script>
-            <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Film de présentation – école ESMOD</p>
-            <p class="project-type">Corporate / tournage &amp; montage</p>
-          </div>
-        </div>
-
-        <!-- Carte 2 : YouTube -->
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
-              title="Evènement - GameCamp 2023"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Évènement – GameCamp 2023</p>
-            <p class="project-type">Captation</p>
-          </div>
-        </div>
-
-        <!-- Carte 3 : Wistia -->
-        <div class="project-card">
-          <div class="project-thumb">
-            <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" async type="module"></script>
-            <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Reportage – UX Camp 2024</p>
-            <p class="project-type">Captation événement professionnel &amp; montage recap</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Entreprises & Collectivités supplémentaires (placeholder, cachés) -->
-      <div class="projects-grid hidden" id="more-business">
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/ddddddddddd?rel=0&modestbranding=1&playsinline=1"
-              title="Corporate placeholder 1"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Corporate placeholder 1</p>
-            <p class="project-type">Tournage &amp; montage</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/eeeeeeeeeee?rel=0&modestbranding=1&playsinline=1"
-              title="Corporate placeholder 2"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Corporate placeholder 2</p>
-            <p class="project-type">Interview &amp; montage</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/fffffffffff?rel=0&modestbranding=1&playsinline=1"
-              title="Corporate placeholder 3"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Corporate placeholder 3</p>
-            <p class="project-type">Film institutionnel</p>
-          </div>
-        </div>
-      </div>
-
-      <button class="btn btn-secondary see-more-btn" data-target="#more-business">
-        Voir plus ↓
-      </button>
-
-      <!-- Clips musicaux -->
-      <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Clips musicaux</h3>
-      <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
-        Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
-      </p>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/HFKDj80Pqrk?rel=0&modestbranding=1&playsinline=1"
-              title='Clip – Casanova - "Nos Antipodes"'
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Clip – Casanova – "Nos Antipodes" (The Voice)</p>
-            <p class="project-type">Réalisation, cadrage &amp; montage</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/XsEYWD5c78k?rel=0&modestbranding=1&playsinline=1"
-              title='Clip – Trois Vagues - "Hit Parade"'
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Clip – Trois Vagues – "Hit Parade"</p>
-            <p class="project-type">Tournage, montage &amp; post‑production</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/AkchxdyLWwI?rel=0&modestbranding=1&playsinline=1"
-              title='III Vagues Session live Cover PNL - "à l&apos;ammoniaque"'
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Session live – Cover PNL "À l'ammoniaque" – III Vagues</p>
-            <p class="project-type">Captation multi‑caméras &amp; montage</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Clips supplémentaires -->
-      <div class="projects-grid hidden" id="more-clips">
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/aaaaaaaaaaa?rel=0&modestbranding=1&playsinline=1"
-              title="Clip placeholder 1"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Clip placeholder 1</p>
-            <p class="project-type">Tournage &amp; montage</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/bbbbbbbbbbb?rel=0&modestbranding=1&playsinline=1"
-              title="Clip placeholder 2"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Clip placeholder 2</p>
-            <p class="project-type">Réalisation &amp; montage</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">
-            <iframe
-              src="https://www.youtube.com/embed/ccccccccccc?rel=0&modestbranding=1&playsinline=1"
-              title="Clip placeholder 3"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="project-body">
-            <p class="project-title">Clip placeholder 3</p>
-            <p class="project-type">Post‑production</p>
-          </div>
-        </div>
-      </div>
-
-      <button class="btn btn-secondary see-more-btn" data-target="#more-clips">
-        Voir plus ↓
-      </button>
-
-    </div>
-  </section>
-
-  <!-- CV -->
-  <section id="cv">
-    <div class="container">
-      <h2 class="section-title">Parcours professionnel</h2>
-      <p class="section-subtitle">
-        Expérience, formations et compétences techniques.
-      </p>
-      <div class="cv-grid">
-        <div>
-          <ul class="cv-list">
-            <li class="cv-item">
-              <p class="cv-year">2017–Présent</p>
-              <p class="cv-role">Vidéaste freelance – Auto-entreprise “Vidéaction”</p>
-              <p class="cv-place">Clips musicaux, trailers jeux vidéo, captation d'évènements, mappings vidéo, interventions en écoles (stop motion, pixilation).</p>
-            </li>
-            <li class="cv-item">
-              <p class="cv-year">2014–2024</p>
-              <p class="cv-role">Cadreur-Monteur / Technicien Vidéo</p>
-              <p class="cv-place">Ankama Studio – Marketing &amp; Communication : vidéos corporate, R&amp;D encodage et diffusion web.</p>
-            </li>
-            <li class="cv-item">
-              <p class="cv-year">2009–2014</p>
-              <p class="cv-role">Monteur - Chef Monteur</p>
-              <p class="cv-place">Ankama Productions : web-TV, reportages, bande-annonces, webséries, clips musicaux.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="card">
-          <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Profil / études</p>
-          <p style="color:var(--muted); margin-bottom:1.5rem;">
-            BTS Montage &amp; Post-Production et Master Cinéma.<br><br>
-            Plus de 15 ans d’expérience entre studio de création (Ankama) et projets freelance.
-          </p>
-
-          <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Compétences clés</p>
-          <p style="color:var(--muted); margin-bottom:1.5rem;">
-            <strong>Techniques :</strong> cadrage, montage, étalonnage, motion léger<br>
-            <strong>Logiciels :</strong> Premiere Pro, After Effects, DaVinci Resolve<br>
-          </p>
-
-          <a href="CV.pdf" class="btn btn-primary" download>📄 Télécharger CV (PDF)</a>
-          <p style="margin-top:0.75rem;">
-            <a href="https://www.linkedin.com/in/cbouveron" target="_blank" rel="noopener">Mon LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Me contacter</h2>
-      <p class="section-subtitle">
-        Parlez-moi de votre projet, je vous réponds sous 24 à 48h.
-      </p>
-      <div class="contact-grid">
-        <div>
-          <form action="https://api.staticforms.xyz/submit" method="POST">
-            <input type="hidden" name="accessKey" value="sf_093e250kki9lfg7d4cinh3lk">
-            <input type="hidden" name="email" value="videaction@proton.me">
-            <input type="hidden" name="replyTo" value="@">
-            <input type="hidden" name="redirectTo" value="https://videaction.github.io/merci.html">
-            <input type="text" name="honeypot" style="display:none">
-
-            <div>
-              <label for="name">Votre nom</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <label for="project">Type de projet</label>
-              <select id="project" name="project">
-                <option>Clip musical</option>
-                <option>Film corporate / institutionnel</option>
-                <option>Événement / aftermovie</option>
-                <option>Contenus réseaux sociaux</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Dites-moi quelques mots sur votre projet, vos objectifs, vos délais…" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Envoyer le message</button>
-          </form>
-        </div>
-        <div class="card">
-          <p style="font-weight:700; margin-bottom:1rem; font-size:1.05rem;">Coordonnées</p>
-          <p><strong>📧 E-mail :</strong> <a href="mailto:videaction@proton.me">videaction[at]proton.me</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>© <span id="year"></span> Clément Bouvéron – VIDEACTION.</p>
-    <p style="margin-top:0.5rem; font-size:0.9rem;">Vidéaste freelance – cadrage &amp; montage sur Valenciennes et environs.</p>
-  </div>
-</footer>
-
-<button class="back-to-top" id="backToTopBtn" aria-label="Retour en haut">
-  <span>↑</span>
-  <div class="back-to-top-tooltip">En haut</div>
-</button>
-
-<button class="back-to-top-top" id="backToTopTopBtn" aria-label="Retour en haut">
-  <span>↑</span>
-  <div class="back-to-top-top-tooltip">En haut</div>
-</button>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
         }
+      });
+    });
+
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    const backToTopTopBtn = document.getElementById('backToTopTopBtn');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 400) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+
+      if (scrollY > 900) {
+        backToTopTopBtn.classList.add('show');
+      } else {
+        backToTopTopBtn.classList.remove('show');
       }
     });
-  });
 
-  const backToTopBtn = document.getElementById('backToTopBtn');
-  const backToTopTopBtn = document.getElementById('backToTopTopBtn');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 400) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
+    function scrollToTop(e) {
+      e.preventDefault();
+      document.querySelector('#top').scrollIntoView({ behavior: 'smooth' });
     }
 
-    if (scrollY > 900) {
-      backToTopTopBtn.classList.add('show');
-    } else {
-      backToTopTopBtn.classList.remove('show');
-    }
-  });
+    backToTopBtn.addEventListener('click', scrollToTop);
+    backToTopTopBtn.addEventListener('click', scrollToTop);
 
-  function scrollToTop(e) {
-    e.preventDefault();
-    document.querySelector('#top').scrollIntoView({ behavior: 'smooth' });
-  }
+    // Boutons "Voir plus"
+    document.querySelectorAll('.see-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetSelector = button.getAttribute('data-target');
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
 
-  backToTopBtn.addEventListener('click', scrollToTop);
-  backToTopTopBtn.addEventListener('click', scrollToTop);
+        const isHidden = target.classList.contains('hidden');
+        target.classList.toggle('hidden');
 
-  // Boutons "Voir plus"
-  document.querySelectorAll('.see-more-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const targetSelector = button.getAttribute('data-target');
-      const target = document.querySelector(targetSelector);
-      if (!target) return;
-
-      const isHidden = target.classList.contains('hidden');
-      target.classList.toggle('hidden');
-      button.textContent = isHidden ? 'Voir moins ↑' : 'Voir plus ↓';
+        button.textContent = isHidden ? 'Voir moins ↑' : 'Voir plus ↓';
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
