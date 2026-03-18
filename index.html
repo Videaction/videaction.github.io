@@ -532,9 +532,9 @@
     margin-bottom: 0.2rem;
   }
 
-  /* Cadre rouge + fond rouge + texte blanc pour titres de sous-sections */
+  /* Barres rouges pour titres de sous-sections */
   .showreel-subsection-title {
-    display: inline-block;
+    display: block;
     padding: 0.3rem 0.9rem;
     border: 1px solid var(--accent);
     border-radius: 999px;
@@ -793,6 +793,37 @@
     padding: 0.55rem 1.1rem;
     font-size: 0.8rem;
     border-radius: 999px;
+  }
+
+  /* Thumbnails YouTube (Clips musicaux) */
+  .project-thumb.yt-thumb {
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .project-thumb .thumb-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .project-thumb .thumb-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(0,0,0,0.75);
+    background: radial-gradient(circle at center, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .project-thumb.yt-thumb:hover .thumb-play {
+    opacity: 1;
   }
   </style>
 </head>
@@ -1172,7 +1203,7 @@
             </div>
           </div>
 
-          <!-- 5 : Vimeo 480555642 -->
+          <!-- 5 : Vimeo 480555642 (laisse l'iframe pour l'instant) -->
           <div class="project-card">
             <div class="project-thumb">
               <iframe src="https://player.vimeo.com/video/480555642"
@@ -1204,9 +1235,9 @@
           Voir plus ↓
         </button>
 
-        <!-- Clips musicaux -->
+        <!-- Clips musicaux (version thumbnails YouTube only) -->
         <h3 class="showreel-subsection-title"
-            style="display:block; font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
+            style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
           Clips musicaux
         </h3>
         <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
@@ -1215,14 +1246,12 @@
 
         <!-- 1-3 visibles -->
         <div class="projects-grid">
-          <!-- 1 : Casanova -->
+          <!-- 1 : Casanova HFKDj80Pqrk -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/HFKDj80Pqrk?rel=0&modestbranding=1&playsinline=1"
-                      title='Clip – Casanova - "Nos Antipodes"'
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="HFKDj80Pqrk">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/HFKDj80Pqrk/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Clip – Casanova – "Nos Antipodes" (The Voice)</p>
@@ -1230,14 +1259,12 @@
             </div>
           </div>
 
-          <!-- 2 : Trois Vagues - Hit Parade -->
+          <!-- 2 : Trois Vagues - Hit Parade XsEYWD5c78k -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/XsEYWD5c78k?rel=0&modestbranding=1&playsinline=1"
-                      title='Clip – Trois Vagues - "Hit Parade"'
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="XsEYWD5c78k">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/XsEYWD5c78k/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Clip – Trois Vagues – "Hit Parade"</p>
@@ -1245,14 +1272,12 @@
             </div>
           </div>
 
-          <!-- 3 : Trill-Dan - Hangyaku Zenya -->
+          <!-- 3 : Trill-Dan - Hangyaku Zenya EfQ5G9iijZ4 -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/EfQ5G9iijZ4?rel=0&modestbranding=1&playsinline=1"
-                      title='Clip – Trill-Dan - "Hangyaku Zenya"'
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="EfQ5G9iijZ4">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/EfQ5G9iijZ4/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Clip – Trill-Dan – "Hangyaku Zenya"</p>
@@ -1263,14 +1288,12 @@
 
         <!-- 4-6 en "voir plus" -->
         <div class="projects-grid hidden" id="more-clips">
-          <!-- 4 : A l'ammoniaque (III Vagues) -->
+          <!-- 4 : A l'ammoniaque AkchxdyLWwI -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/AkchxdyLWwI?rel=0&modestbranding=1&playsinline=1"
-                      title='III Vagues Session live Cover PNL - "à l&apos;ammoniaque"'
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="AkchxdyLWwI">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/AkchxdyLWwI/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">
@@ -1280,14 +1303,12 @@
             </div>
           </div>
 
-          <!-- 5 : Le Bonheur - Gauthier Galand & Justine Raux -->
+          <!-- 5 : Le Bonheur NJ3a7S3bdgc -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/NJ3a7S3bdgc?rel=0&modestbranding=1&playsinline=1"
-                      title='Clip – "Le Bonheur" - Gauthier Galand &amp; Justine Raux'
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="NJ3a7S3bdgc">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/NJ3a7S3bdgc/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Clip – "Le Bonheur" – Gauthier Galand &amp; Justine Raux</p>
@@ -1295,14 +1316,12 @@
             </div>
           </div>
 
-          <!-- 6 : TROIS VAGUES - Des gens heureux -->
+          <!-- 6 : TROIS VAGUES - Des gens heureux QwO56nGwaYo -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/QwO56nGwaYo?rel=0&modestbranding=1&playsinline=1"
-                      title='Clip – TROIS VAGUES - "Des gens heureux"'
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="QwO56nGwaYo">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/QwO56nGwaYo/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Clip – TROIS VAGUES – "Des gens heureux"</p>
@@ -1508,6 +1527,22 @@
         target.classList.toggle('hidden');
 
         button.textContent = isHidden ? 'Voir moins ↑' : 'Voir plus ↓';
+      });
+    });
+
+    // Thumbnails YouTube -> remplacement par iframe au clic
+    document.querySelectorAll('.yt-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const id = thumb.getAttribute('data-video-id');
+        if (!id) return;
+
+        thumb.innerHTML = `
+          <iframe src="https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&autoplay=1"
+                  title="YouTube video"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        `;
       });
     });
   </script>
