@@ -532,7 +532,7 @@
     margin-bottom: 0.2rem;
   }
 
-  /* Cadre rouge pour titres de sous-sections (Bandes-annonces, Entreprises & Collectivités, Clips musicaux) */
+  /* Cadre rouge + fond rouge + texte blanc pour titres de sous-sections */
   .showreel-subsection-title {
     display: inline-block;
     padding: 0.3rem 0.9rem;
@@ -540,6 +540,8 @@
     border-radius: 999px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    background: var(--accent);
+    color: #ffffff;
   }
 
   /* SERVICES */
@@ -1203,7 +1205,8 @@
         </button>
 
         <!-- Clips musicaux -->
-        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
+        <h3 class="showreel-subsection-title"
+            style="display:block; font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
           Clips musicaux
         </h3>
         <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
