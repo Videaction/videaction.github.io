@@ -184,13 +184,6 @@
     }
   }
 
-  .hero-subtitle-role {
-    font-size: 1.08rem;
-    font-weight: 600;
-    color: var(--muted);
-    margin-bottom: 0.3rem;
-  }
-
   .hero-name-tag-row {
     display: flex;
     align-items: center;
@@ -208,19 +201,6 @@
 
   .hero-subtitle-name {
     font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .tag {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.35rem 0.8rem;
-    font-size: 0.85rem;
-    border-radius: 999px;
-    background: rgba(192,57,43,0.16);
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
     font-weight: 600;
   }
 
@@ -254,7 +234,7 @@
   }
 
   @media (max-width: 768px) {
-    .hero-subtitle, .hero-subtitle-role {
+    .hero-subtitle {
       margin-left: auto;
       margin-right: auto;
     }
@@ -490,7 +470,7 @@
     color: var(--muted);
   }
 
-  /* Variantes pour la section Bandes-annonces (encore plus compactes) */
+  /* Variantes Bandes-annonces */
   .projects-grid.ba-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 0.75rem;
@@ -772,7 +752,7 @@
     }
   }
 
-  /* Placeholders Wistia (showreel + z2lm1s83tp + 94u3wxyxyd + hxnfjv3lup) */
+  /* Placeholders Wistia */
   wistia-player[media-id='cf88q5fgww']:not(:defined),
   wistia-player[media-id='z2lm1s83tp']:not(:defined),
   wistia-player[media-id='94u3wxyxyd']:not(:defined),
@@ -795,7 +775,7 @@
     border-radius: 999px;
   }
 
-  /* Thumbnails YouTube (Clips musicaux) */
+  /* Thumbnails YouTube (toutes sections) */
   .project-thumb.yt-thumb {
     cursor: pointer;
     overflow: hidden;
@@ -1001,12 +981,10 @@
         <h4 class="ba-subheading">Films</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/8IN7a0GNNJw?rel=0&modestbranding=1&playsinline=1"
-                      title="Bande-annonce – DOFUS Le Film"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="8IN7a0GNNJw">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/8IN7a0GNNJw/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Bande-annonce – DOFUS Le Film</p>
@@ -1015,12 +993,10 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/_SoUNNF11pw?rel=0&modestbranding=1&playsinline=1"
-                      title="Princesse Dragon – OST"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="_SoUNNF11pw">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/_SoUNNF11pw/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Princesse Dragon – Bande originale</p>
@@ -1029,12 +1005,10 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/TXgVY7IVljM?rel=0&modestbranding=1&playsinline=1"
-                      title="Mutafukaz – Bande-annonce"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="TXgVY7IVljM">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/TXgVY7IVljM/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Mutafukaz – Bande-annonce</p>
@@ -1047,12 +1021,10 @@
         <h4 class="ba-subheading" style="margin-top:0.9rem;">Jeux vidéo</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/Ic3_MAQ77u0?rel=0&modestbranding=1&playsinline=1"
-                      title="Trailer One More Gate"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="Ic3_MAQ77u0">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/Ic3_MAQ77u0/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Trailer – One More Gate</p>
@@ -1061,12 +1033,10 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/b-lrH2-JKj8?rel=0&modestbranding=1&playsinline=1"
-                      title="Trailer – DOFUS Temporis Retro"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="b-lrH2-JKj8">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/b-lrH2-JKj8/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">DOFUS – Temporis Retro</p>
@@ -1075,12 +1045,10 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/qa3eG3KYRJ4?rel=0&modestbranding=1&playsinline=1"
-                      title="SUPER NANO BLASTER – Trailer"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="qa3eG3KYRJ4">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/qa3eG3KYRJ4/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">SUPER NANO BLASTER – Trailer</p>
@@ -1093,12 +1061,10 @@
         <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/fJRGLJv2PnI?rel=0&modestbranding=1&playsinline=1"
-                      title="Baidir – Trailer série"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="fJRGLJv2PnI">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/fJRGLJv2PnI/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Baidir – Série animée</p>
@@ -1107,12 +1073,10 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/EvfrNKvEgqY?rel=0&modestbranding=1&playsinline=1"
-                      title="Kerubim – Série"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="EvfrNKvEgqY">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/EvfrNKvEgqY/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Kerubim – Série</p>
@@ -1121,12 +1085,10 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/Wc8Z_o1xQOc?rel=0&modestbranding=1&playsinline=1"
-                      title="Teasing Kickstarter WAKFU"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="Wc8Z_o1xQOc">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/Wc8Z_o1xQOc/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Teasing Kickstarter WAKFU</p>
@@ -1158,14 +1120,12 @@
             </div>
           </div>
 
-          <!-- Carte 2 : YouTube GameCamp 2023 -->
+          <!-- Carte 2 : YouTube GameCamp 2023 dKBiMblJibs -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/dKBiMblJibs?rel=0&modestbranding=1&playsinline=1"
-                      title="Evènement - GameCamp 2023"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="dKBiMblJibs">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/dKBiMblJibs/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Évènement – GameCamp 2023</p>
@@ -1190,12 +1150,10 @@
         <div class="projects-grid hidden" id="more-business">
           <!-- 4 : YouTube 9PH4y-OErDo -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://www.youtube.com/embed/9PH4y-OErDo?rel=0&modestbranding=1&playsinline=1"
-                      title="Film entreprises & collectivités - YouTube"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb yt-thumb" data-video-id="9PH4y-OErDo">
+              <div class="thumb-image"
+                   style="background-image:url('https://img.youtube.com/vi/9PH4y-OErDo/hqdefault.jpg');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Film institutionnel – YouTube</p>
@@ -1203,7 +1161,7 @@
             </div>
           </div>
 
-          <!-- 5 : Vimeo 480555642 (laisse l'iframe pour l'instant) -->
+          <!-- 5 : Vimeo 480555642 (embed classique) -->
           <div class="project-card">
             <div class="project-thumb">
               <iframe src="https://player.vimeo.com/video/480555642"
@@ -1235,7 +1193,7 @@
           Voir plus ↓
         </button>
 
-        <!-- Clips musicaux (version thumbnails YouTube only) -->
+        <!-- Clips musicaux (thumbnails YouTube) -->
         <h3 class="showreel-subsection-title"
             style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
           Clips musicaux
