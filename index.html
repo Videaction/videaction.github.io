@@ -788,6 +788,12 @@
     background-position: center;
   }
 
+  /* Overlay play commun (YouTube, Wistia, Vimeo) */
+  .project-thumb.thumb-overlay {
+    position: relative;
+    cursor: pointer;
+  }
+
   .project-thumb .thumb-play {
     position: absolute;
     inset: 0;
@@ -800,10 +806,18 @@
     background: radial-gradient(circle at center, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
     opacity: 0;
     transition: opacity 0.2s ease;
+    pointer-events: none;
   }
 
-  .project-thumb.yt-thumb:hover .thumb-play {
+  .project-thumb.yt-thumb:hover .thumb-play,
+  .project-thumb.thumb-overlay:hover .thumb-play,
+  .project-thumb.vimeo-thumb:hover .thumb-play {
     opacity: 1;
+  }
+
+  .project-thumb.vimeo-thumb {
+    cursor: pointer;
+    overflow: hidden;
   }
   </style>
 </head>
@@ -966,7 +980,7 @@
         </p>
 
         <!-- Showreel Wistia -->
-        <div class="video-wrapper" style="margin-bottom: 3.5rem;">
+        <div class="video-wrapper">
           <script src="https://fast.wistia.com/embed/cf88q5fgww.js" defer type="module"></script>
           <wistia-player media-id="cf88q5fgww" aspect="1.7777777777777777"></wistia-player>
         </div>
@@ -981,7 +995,7 @@
         <h4 class="ba-subheading">Films</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="8IN7a0GNNJw">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/8IN7a0GNNJw/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -993,7 +1007,7 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="_SoUNNF11pw">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/_SoUNNF11pw/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1005,7 +1019,7 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="TXgVY7IVljM">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/TXgVY7IVljM/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1021,7 +1035,7 @@
         <h4 class="ba-subheading" style="margin-top:0.9rem;">Jeux vidéo</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="Ic3_MAQ77u0">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/Ic3_MAQ77u0/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1033,7 +1047,7 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="b-lrH2-JKj8">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/b-lrH2-JKj8/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1045,7 +1059,7 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="qa3eG3KYRJ4">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/qa3eG3KYRJ4/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1061,7 +1075,7 @@
         <h4 class="ba-subheading" style="margin-top:0.9rem;">Séries</h4>
         <div class="projects-grid ba-grid">
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="fJRGLJv2PnI">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/fJRGLJv2PnI/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1073,7 +1087,7 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="EvfrNKvEgqY">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/EvfrNKvEgqY/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1085,7 +1099,7 @@
           </div>
 
           <div class="project-card ba-card">
-            <div class="project-thumb yt-thumb" data-video-id="Wc8Z_o1xQOc">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/Wc8Z_o1xQOc/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1108,11 +1122,12 @@
 
         <!-- 3 cartes visibles -->
         <div class="projects-grid">
-          <!-- Carte 1 : Wistia z2lm1s83tp -->
+          <!-- 1 : Wistia z2lm1s83tp -->
           <div class="project-card">
-            <div class="project-thumb">
+            <div class="project-thumb thumb-overlay">
               <script src="https://fast.wistia.com/embed/z2lm1s83tp.js" defer type="module"></script>
               <wistia-player media-id="z2lm1s83tp" aspect="1.7777777777777777"></wistia-player>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Film de présentation – école ESMOD</p>
@@ -1120,9 +1135,9 @@
             </div>
           </div>
 
-          <!-- Carte 2 : YouTube GameCamp 2023 dKBiMblJibs -->
+          <!-- 2 : YouTube dKBiMblJibs -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="dKBiMblJibs">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/dKBiMblJibs/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1133,11 +1148,12 @@
             </div>
           </div>
 
-          <!-- Carte 3 : Wistia 94u3wxyxyd -->
+          <!-- 3 : Wistia 94u3wxyxyd -->
           <div class="project-card">
-            <div class="project-thumb">
+            <div class="project-thumb thumb-overlay">
               <script src="https://fast.wistia.com/embed/94u3wxyxyd.js" defer type="module"></script>
               <wistia-player media-id="94u3wxyxyd" aspect="1.7777777777777777"></wistia-player>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Reportage – UX Camp 2024</p>
@@ -1150,7 +1166,7 @@
         <div class="projects-grid hidden" id="more-business">
           <!-- 4 : YouTube 9PH4y-OErDo -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="9PH4y-OErDo">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/9PH4y-OErDo/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1161,14 +1177,12 @@
             </div>
           </div>
 
-          <!-- 5 : Vimeo 480555642 (embed classique) -->
+          <!-- 5 : Vimeo 480555642 -> thumbnail + iframe au clic -->
           <div class="project-card">
-            <div class="project-thumb">
-              <iframe src="https://player.vimeo.com/video/480555642"
-                      title="Film entreprises & collectivités - Vimeo"
-                      loading="lazy"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowfullscreen></iframe>
+            <div class="project-thumb vimeo-thumb" data-vimeo-id="480555642">
+              <div class="thumb-image"
+                   style="background-image:url('https://i.vimeocdn.com/video/998007454-c4767bed4407ce4370ed891f95199cabc5d8b9bc460bf8a8ecabb7acf6c54bb8-d_1920x1080?region=us');"></div>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Film institutionnel – Vimeo</p>
@@ -1178,9 +1192,10 @@
 
           <!-- 6 : Wistia hxnfjv3lup -->
           <div class="project-card">
-            <div class="project-thumb">
+            <div class="project-thumb thumb-overlay">
               <script src="https://fast.wistia.com/embed/hxnfjv3lup.js" defer type="module"></script>
               <wistia-player media-id="hxnfjv3lup" aspect="1.7777777777777777"></wistia-player>
+              <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
               <p class="project-title">Reportage – Entreprises &amp; Collectivités</p>
@@ -1193,7 +1208,7 @@
           Voir plus ↓
         </button>
 
-        <!-- Clips musicaux (thumbnails YouTube) -->
+        <!-- Clips musicaux -->
         <h3 class="showreel-subsection-title"
             style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
           Clips musicaux
@@ -1204,9 +1219,9 @@
 
         <!-- 1-3 visibles -->
         <div class="projects-grid">
-          <!-- 1 : Casanova HFKDj80Pqrk -->
+          <!-- 1 : Casanova -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="HFKDj80Pqrk">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/HFKDj80Pqrk/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1217,9 +1232,9 @@
             </div>
           </div>
 
-          <!-- 2 : Trois Vagues - Hit Parade XsEYWD5c78k -->
+          <!-- 2 : Trois Vagues - Hit Parade -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="XsEYWD5c78k">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/XsEYWD5c78k/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1230,9 +1245,9 @@
             </div>
           </div>
 
-          <!-- 3 : Trill-Dan - Hangyaku Zenya EfQ5G9iijZ4 -->
+          <!-- 3 : Trill-Dan - Hangyaku Zenya -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="EfQ5G9iijZ4">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/EfQ5G9iijZ4/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1246,9 +1261,9 @@
 
         <!-- 4-6 en "voir plus" -->
         <div class="projects-grid hidden" id="more-clips">
-          <!-- 4 : A l'ammoniaque AkchxdyLWwI -->
+          <!-- 4 : A l'ammoniaque -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="AkchxdyLWwI">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/AkchxdyLWwI/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1261,9 +1276,9 @@
             </div>
           </div>
 
-          <!-- 5 : Le Bonheur NJ3a7S3bdgc -->
+          <!-- 5 : Le Bonheur -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="NJ3a7S3bdgc">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/NJ3a7S3bdgc/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1274,9 +1289,9 @@
             </div>
           </div>
 
-          <!-- 6 : TROIS VAGUES - Des gens heureux QwO56nGwaYo -->
+          <!-- 6 : TROIS VAGUES - Des gens heureux -->
           <div class="project-card">
-            <div class="project-thumb yt-thumb" data-video-id="QwO56nGwaYo">
+            <div class="project-thumb yt-thumb">
               <div class="thumb-image"
                    style="background-image:url('https://img.youtube.com/vi/QwO56nGwaYo/hqdefault.jpg');"></div>
               <div class="thumb-play">▶</div>
@@ -1432,8 +1447,10 @@
   </button>
 
   <script>
+    // Année dynamique
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Scroll doux
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -1447,6 +1464,7 @@
       });
     });
 
+    // Boutons retour en haut
     const backToTopBtn = document.getElementById('backToTopBtn');
     const backToTopTopBtn = document.getElementById('backToTopTopBtn');
 
@@ -1488,17 +1506,63 @@
       });
     });
 
-    // Thumbnails YouTube -> remplacement par iframe au clic
-    document.querySelectorAll('.yt-thumb').forEach(thumb => {
+    // ---------- LECTURE AU CLIC SUR LE PLAY ----------
+
+    // 1) YouTube : thumbnails -> iframe autoplay
+    document.querySelectorAll('.project-thumb.yt-thumb').forEach(thumb => {
       thumb.addEventListener('click', () => {
-        const id = thumb.getAttribute('data-video-id');
+        const imgDiv = thumb.querySelector('.thumb-image');
+        if (!imgDiv) return;
+        const bg = window.getComputedStyle(imgDiv).backgroundImage;
+        const match = bg.match(/\/vi\/([^/]+)\//);
+        const id = match && match[1];
         if (!id) return;
 
+        thumb.classList.remove('yt-thumb');
         thumb.innerHTML = `
           <iframe src="https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&autoplay=1"
                   title="YouTube video"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        `;
+      });
+    });
+
+    // 2) Wistia : clic sur overlay -> .play() via API Aurora
+    document.querySelectorAll('.project-thumb.thumb-overlay').forEach(wrapper => {
+      const wistiaEl = wrapper.querySelector('wistia-player');
+      const thumbPlay = wrapper.querySelector('.thumb-play');
+
+      if (wistiaEl && thumbPlay) {
+        thumbPlay.style.pointerEvents = 'auto';
+
+        const startPlay = (e) => {
+          if (e) e.stopPropagation();
+          try {
+            wistiaEl.play(); // Aurora player API
+          } catch (err) {
+            console.warn('Wistia play error', err);
+          }
+        };
+
+        thumbPlay.addEventListener('click', startPlay);
+        wrapper.addEventListener('click', startPlay);
+      }
+    });
+
+    // 3) Vimeo : clic sur vignette -> remplace par iframe autoplay
+    document.querySelectorAll('.project-thumb.vimeo-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const id = thumb.getAttribute('data-vimeo-id');
+        if (!id) return;
+
+        thumb.classList.remove('vimeo-thumb');
+        thumb.innerHTML = `
+          <iframe src="https://player.vimeo.com/video/${id}?autoplay=1&muted=1"
+                  title="Vimeo video"
+                  loading="lazy"
+                  allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen></iframe>
         `;
       });
