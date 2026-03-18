@@ -1131,7 +1131,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Film de présentation – école ESMOD</p>
-              <p class="project-type">Corporate / tournage &amp; montage</p>
+              <p class="project-type">Corporate / Tournage &amp; Montage</p>
             </div>
           </div>
 
@@ -1157,7 +1157,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Reportage – UX Camp 2024</p>
-              <p class="project-type">Captation événement professionnel &amp; montage recap</p>
+              <p class="project-type">Captation événement professionnel &amp; Montage recap</p>
             </div>
           </div>
         </div>
@@ -1173,7 +1173,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Making-Of "Animez Moi" (Fête de l'Anim')</p>
-              <p class="project-type">Corporate / Evènement</p>
+              <p class="project-type">Reportage / Evènement</p>
             </div>
           </div>
 
@@ -1186,7 +1186,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Mapping Hospice Comtesse</p>
-              <p class="project-type">Film de présentation / Montage</p>
+              <p class="project-type">Montage / Film de présentation</p>
             </div>
           </div>
 
@@ -1198,8 +1198,8 @@
               <div class="thumb-play">▶</div>
             </div>
             <div class="project-body">
-              <p class="project-title">Film Corporate - RSE</p>
-              <p class="project-type">Communication B2B</p>
+              <p class="project-title">Film Corporate - ANKAMA RSE</p>
+              <p class="project-type">Cadrage &amp; Montage - Communication B2B</p>
             </div>
           </div>
         </div>
@@ -1241,7 +1241,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Clip – Trois Vagues – "Hit Parade"</p>
-              <p class="project-type">Tournage, montage &amp; post‑production</p>
+              <p class="project-type">Tournage, Montage &amp; Post‑production</p>
             </div>
           </div>
 
@@ -1254,7 +1254,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Clip – Trill-Dan – "Hangyaku Zenya"</p>
-              <p class="project-type">Captation multi‑caméras &amp; montage</p>
+              <p class="project-type">Captation multi‑caméras &amp; Montage</p>
             </div>
           </div>
         </div>
@@ -1272,7 +1272,7 @@
               <p class="project-title">
                 Session live – Cover PNL "À l'ammoniaque" – III Vagues
               </p>
-              <p class="project-type">Captation multi‑caméras &amp; montage</p>
+              <p class="project-type">Captation multi‑caméras &amp; Montage</p>
             </div>
           </div>
 
@@ -1285,7 +1285,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Clip – "Le Bonheur" – Gauthier Galand &amp; Justine Raux</p>
-              <p class="project-type">Réalisation, tournage &amp; montage</p>
+              <p class="project-type">Réalisation, Tournage &amp; Montage</p>
             </div>
           </div>
 
@@ -1298,7 +1298,7 @@
             </div>
             <div class="project-body">
               <p class="project-title">Clip – TROIS VAGUES – "Des gens heureux"</p>
-              <p class="project-type">Tournage &amp; montage</p>
+              <p class="project-type">Tournage &amp; Montage</p>
             </div>
           </div>
         </div>
@@ -1529,26 +1529,54 @@
       });
     });
 
-    // 2) Wistia : clic sur overlay -> .play() via API Aurora
+    // 2) Wistia : clic sur ▶, overlay retiré pendant la lecture, puis remis en fin
     document.querySelectorAll('.project-thumb.thumb-overlay').forEach(wrapper => {
       const wistiaEl = wrapper.querySelector('wistia-player');
       const thumbPlay = wrapper.querySelector('.thumb-play');
 
-      if (wistiaEl && thumbPlay) {
-        thumbPlay.style.pointerEvents = 'auto';
+      if (!wistiaEl || !thumbPlay) return;
 
-        const startPlay = (e) => {
-          if (e) e.stopPropagation();
-          try {
-            wistiaEl.play(); // Aurora player API
-          } catch (err) {
-            console.warn('Wistia play error', err);
-          }
-        };
+      // On mémorise l'état initial de l'overlay
+      const initialOverlayHTML = thumbPlay.outerHTML;
+      const initialHasOverlayClass = wrapper.classList.contains('thumb-overlay');
 
-        thumbPlay.addEventListener('click', startPlay);
-        wrapper.addEventListener('click', startPlay);
-      }
+      thumbPlay.style.pointerEvents = 'auto';
+
+      const startPlay = (e) => {
+        if (e) e.stopPropagation();
+        try {
+          wistiaEl.play();
+        } catch (err) {
+          console.warn('Wistia play error', err);
+        }
+        thumbPlay.remove();
+        wrapper.classList.remove('thumb-overlay');
+      };
+
+      thumbPlay.addEventListener('click', startPlay);
+
+      // Événement de fin via l'API Aurora
+      wistiaEl.addEventListener('ended', () => {
+        try {
+          wistiaEl.currentTime = 0;
+          wistiaEl.pause();
+        } catch (err) {
+          console.warn('Wistia reset error', err);
+        }
+
+        // On recrée le bouton ▶
+        wrapper.insertAdjacentHTML('beforeend', initialOverlayHTML);
+        const newThumbPlay = wrapper.querySelector('.thumb-play');
+
+        if (initialHasOverlayClass) {
+          wrapper.classList.add('thumb-overlay');
+        }
+
+        if (newThumbPlay) {
+          newThumbPlay.style.pointerEvents = 'auto';
+          newThumbPlay.addEventListener('click', startPlay);
+        }
+      });
     });
 
     // 3) Vimeo : clic sur vignette -> remplace par iframe autoplay
