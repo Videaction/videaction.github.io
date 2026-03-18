@@ -468,35 +468,48 @@
       color: var(--muted);
     }
 
-    /* Variantes pour la section Bandes-annonce (vignettes plus petites) */
-    .projects-grid.ba-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
+/* Variantes pour la section Bandes-annonce (vignettes plus compactes) */
+.projects-grid.ba-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;              /* moins d’espace entre cartes */
+  margin-top: 0.5rem;     /* remonter un peu la grille */
+}
 
-    .project-card.ba-card .project-thumb {
-      aspect-ratio: 16 / 9;
-      transform: scale(0.8);
-      transform-origin: top center;
-    }
+.project-card.ba-card {
+  border-radius: 16px;
+}
 
-    .project-card.ba-card .project-body {
-      padding: 1rem 1.25rem 1.25rem;
-    }
+.project-card.ba-card .project-thumb {
+  aspect-ratio: 16 / 9;
+  transform: scale(0.7);          /* vignette ~30% plus petite */
+  transform-origin: top center;
+}
 
-    /* Sous-titres BA plus serrés */
-    .ba-subtitle {
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-      max-width: 700px;
-    }
+.project-card.ba-card .project-body {
+  padding: 0.6rem 1rem 0.9rem;    /* moins de padding texte */
+}
 
-    .ba-subheading {
-      font-size: 1.2rem;
-      margin-top: 1.5rem;
-      margin-bottom: 0.35rem;
-    }
+.project-card.ba-card .project-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.project-card.ba-card .project-type {
+  font-size: 0.8rem;
+}
+
+/* Sous-titres BA plus serrés */
+.ba-subtitle {
+  color: var(--muted);
+  margin-bottom: 0.8rem;    /* sous-titre plus proche des cartes */
+  max-width: 700px;
+}
+
+.ba-subheading {
+  font-size: 1.1rem;
+  margin-top: 0.9rem;       /* très peu d’espace entre sous titres */
+  margin-bottom: 0.25rem;
+}
 
     /* SERVICES */
     .services-grid {
