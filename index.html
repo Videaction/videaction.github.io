@@ -532,6 +532,16 @@
     margin-bottom: 0.2rem;
   }
 
+  /* Cadre rouge pour titres de sous-sections (Bandes-annonces, Entreprises & Collectivités, Clips musicaux) */
+  .showreel-subsection-title {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
   /* SERVICES */
   .services-grid {
     display: grid;
@@ -937,7 +947,7 @@
     <!-- Showreel + Projets -->
     <section id="showreel">
       <div class="container">
-        <h2 class="section-title">Showreel</h2>
+        <h2 class="section-title">SHOWREEL</h2>
         <p class="section-subtitle">
           Un aperçu de mon travail dans différents univers : entreprises &amp; collectivités, clips musicaux et bandes-annonces.
         </p>
@@ -949,7 +959,9 @@
         </div>
 
         <!-- Bandes-annonces -->
-        <h3 style="font-size:1.5rem; margin-bottom:0.75rem;">Bandes-annonces</h3>
+        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-bottom:0.75rem;">
+          Bandes-annonces
+        </h3>
         <p class="ba-subtitle">Bandes-annonces de films, séries, et jeux vidéo.</p>
 
         <!-- Films -->
@@ -1091,13 +1103,15 @@
         </div>
 
         <!-- Entreprises & Collectivités -->
-        <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Entreprises &amp; Collectivités</h3>
+        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
+          Entreprises &amp; Collectivités
+        </h3>
         <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
           Films pour entreprises, collectivités, associations et organismes : interviews, conférences, événements,
           films de présentation ou communication officielle.
         </p>
 
-        <!-- 3 cartes visibles comme au départ -->
+        <!-- 3 cartes visibles -->
         <div class="projects-grid">
           <!-- Carte 1 : Wistia z2lm1s83tp -->
           <div class="project-card">
@@ -1189,7 +1203,9 @@
         </button>
 
         <!-- Clips musicaux -->
-        <h3 style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">Clips musicaux</h3>
+        <h3 class="showreel-subsection-title" style="font-size:1.5rem; margin-top:3rem; margin-bottom:1rem;">
+          Clips musicaux
+        </h3>
         <p style="color:var(--muted); margin-bottom:1.1rem; max-width:700px;">
           Clips pour artistes, groupes ou labels, avec un travail soigné sur l’image, le rythme et la mise en scène.
         </p>
