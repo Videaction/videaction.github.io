@@ -468,47 +468,48 @@
       color: var(--muted);
     }
 
-/* Variantes pour la section Bandes-annonce (vignettes plus compactes) */
+/* Variantes pour la section Bandes-annonce (cartes très compactes) */
 .projects-grid.ba-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;              /* moins d’espace entre cartes */
-  margin-top: 0.5rem;     /* remonter un peu la grille */
+  gap: 0.75rem;            /* peu d'espace entre cartes */
+  margin-top: 0.25rem;
 }
 
 .project-card.ba-card {
-  border-radius: 16px;
+  border-radius: 12px;
+  padding: 0.35rem 0.35rem 0.5rem;      /* quasi pas de padding autour */
+  box-shadow: var(--shadow);
 }
 
 .project-card.ba-card .project-thumb {
   aspect-ratio: 16 / 9;
-  transform: scale(0.7);          /* vignette ~30% plus petite */
-  transform-origin: top center;
+  background: #000;
 }
 
 .project-card.ba-card .project-body {
-  padding: 0.6rem 1rem 0.9rem;    /* moins de padding texte */
+  padding: 0.35rem 0.4rem 0.4rem;       /* très peu de padding texte */
 }
 
 .project-card.ba-card .project-title {
-  font-size: 0.95rem;
-  margin-bottom: 0.15rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
 }
 
 .project-card.ba-card .project-type {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
 /* Sous-titres BA plus serrés */
 .ba-subtitle {
   color: var(--muted);
-  margin-bottom: 0.8rem;    /* sous-titre plus proche des cartes */
+  margin-bottom: 0.5rem;   /* sous-titre collé aux films */
   max-width: 700px;
 }
 
 .ba-subheading {
-  font-size: 1.1rem;
-  margin-top: 0.9rem;       /* très peu d’espace entre sous titres */
-  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+  margin-top: 0.6rem;      /* très peu entre Films / Jeux / Séries */
+  margin-bottom: 0.2rem;
 }
 
     /* SERVICES */
